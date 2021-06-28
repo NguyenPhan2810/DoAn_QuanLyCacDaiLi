@@ -8,11 +8,11 @@ using System.Windows.Forms;
 
 namespace QuanLyCacDaiLi
 {
-    public partial class TraCuuDaiLy : Form
+    public partial class FormQuanLyDaiLy : Form
     {
         private string findingName;
 
-        public TraCuuDaiLy()
+        public FormQuanLyDaiLy()
         {
             InitializeComponent();
         }
@@ -24,11 +24,15 @@ namespace QuanLyCacDaiLi
 
         private void LoadTable()
         {
-            string query = "select STT, TENDAILY, LOAI, QUAN, TIENNO "
-                          + "from DAILY ";
+            string query = @"select STT as 'Số thứ tự',
+                                    TENDAILY as 'Tên đại lý',
+                                    LOAI as 'Loại',
+                                    QUAN as 'Quận',
+                                    TIENNO as 'Tiền nợ' 
+                             from DAILY ";
 
             if (findingName != "" && findingName != null)
-                query += $"where DAILY.TENDAILY = '{findingName}'";
+                query += $"where DAILY.TENDAILY like '%{findingName}%'";
 
             var dt = DatabaseHelper.GetDataTable(query);
 

@@ -1,7 +1,7 @@
 ﻿
 namespace QuanLyCacDaiLi
 {
-    partial class TraCuuDaiLy
+    partial class FormQuanLyDaiLy
     {
         /// <summary>
         /// Required designer variable.

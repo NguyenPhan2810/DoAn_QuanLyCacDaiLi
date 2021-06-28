@@ -6,21 +6,26 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
-
+using System.Configuration;
 
 namespace QuanLyCacDaiLi
 {
     class DatabaseHelper
     {
-        static string dbName = "QLDL";
+        private static string databaseName = "QLDL";
+        private static SqlConnection cnn = null;
 
         public static SqlConnection OpenConnection()
         {
-            string connectionString = $"Data Source=.\\SQLEXPRESS;Initial Catalog={dbName};Integrated Security=True;";
 
             try
             {
-                SqlConnection cnn = new SqlConnection(connectionString);
+                if (cnn == null)
+                {
+                    string connectionString = ConfigurationManager.ConnectionStrings[databaseName].ConnectionString;
+                    cnn = new SqlConnection(connectionString);
+                }
+
                 cnn.Open();
                 return cnn;
             }
