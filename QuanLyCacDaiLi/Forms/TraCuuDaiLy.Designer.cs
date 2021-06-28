@@ -1,7 +1,7 @@
 ﻿
 namespace QuanLyCacDaiLi
 {
-    partial class FormTraCuuDaiLy
+    partial class TraCuuDaiLy
     {
         /// <summary>
         /// Required designer variable.
@@ -94,7 +94,6 @@ namespace QuanLyCacDaiLi
             this.textBoxTitle.Enabled = false;
             this.textBoxTitle.Font = new System.Drawing.Font("Nunito", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.textBoxTitle.HideSelection = false;
             this.textBoxTitle.Location = new System.Drawing.Point(0, 0);
             this.textBoxTitle.Name = "textBoxTitle";
             this.textBoxTitle.ReadOnly = true;

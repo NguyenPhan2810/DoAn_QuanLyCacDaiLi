@@ -10,16 +10,4 @@
     <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Update="Forms\FormTraCuuDaiLy - Copy.Designer.cs">
-      <DependentUpon>FormTraCuuDaiLy.Designer.cs</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="Forms\FormTraCuuDaiLy - Copy.resx">
-      <DependentUpon>FormTraCuuDaiLy.resx</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-
 </Project>

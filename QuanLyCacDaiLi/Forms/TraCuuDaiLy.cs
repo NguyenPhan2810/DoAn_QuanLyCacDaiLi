@@ -8,11 +8,11 @@ using System.Windows.Forms;
 
 namespace QuanLyCacDaiLi
 {
-    public partial class FormTraCuuDaiLy : Form
+    public partial class TraCuuDaiLy : Form
     {
         private string findingName;
 
-        public FormTraCuuDaiLy()
+        public TraCuuDaiLy()
         {
             InitializeComponent();
         }
@@ -28,7 +28,7 @@ namespace QuanLyCacDaiLi
                           + "from DAILY ";
 
             if (findingName != "" && findingName != null)
-                query += $"where DAILY.TENDAILY like '%{findingName}%'";
+                query += $"where DAILY.TENDAILY = '{findingName}'";
 
             var dt = DatabaseHelper.GetDataTable(query);
 
