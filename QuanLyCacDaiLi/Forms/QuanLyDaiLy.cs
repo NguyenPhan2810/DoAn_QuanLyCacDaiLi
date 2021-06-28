@@ -8,13 +8,17 @@ using System.Windows.Forms;
 
 namespace QuanLyCacDaiLi
 {
-    public partial class TraCuuDaiLy : Form
+    public partial class QuanLyDaiLy : Form
     {
         private string findingName;
+        private DataGridViewComboBoxColumn dataGridViewDanhSachDaiLy;
 
-        public TraCuuDaiLy()
+        public QuanLyDaiLy()
         {
             InitializeComponent();
+
+            dataGridViewDanhSachDaiLy = new DataGridViewComboBoxColumn();
+            groupBoxDataDaily.Contains((Control)dataGridViewDanhSachDaiLy);
         }
 
         private void TraCuuDaiLy_Load(object sender, EventArgs e)
@@ -24,15 +28,20 @@ namespace QuanLyCacDaiLi
 
         private void LoadTable()
         {
-            string query = "select STT, TENDAILY, LOAI, QUAN, TIENNO "
-                          + "from DAILY ";
+            string query = @"select STT as 'Số thứ tự',
+                                    TENDAILY as 'Tên đại lý',
+                                    LOAI as 'Loại',
+                                    QUAN as 'Quận',
+                                    TIENNO as 'Tiền nợ' 
+                             from DAILY";
 
             if (findingName != "" && findingName != null)
-                query += $"where DAILY.TENDAILY = '{findingName}'";
+                query += $" where DAILY.TENDAILY like '%{findingName}%'";
 
             var dt = DatabaseHelper.GetDataTable(query);
 
             dataGridViewDanhSachDaiLy.DataSource = dt;
+
         }
 
         private void textBoxTimDaiLy_TextChanged(object sender, EventArgs e)
