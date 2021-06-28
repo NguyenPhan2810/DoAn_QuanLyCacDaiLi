@@ -55,6 +55,7 @@ namespace QuanLyCacDaiLi
                     break;
                 case LevelOfAccess.Admin:
 
+                    buttonTiepNhanDaiLy.Visible = true;
                     buttonTraCuuDaiLy.Visible = true;
                     buttonLapBaoCaoThang.Visible = true;
                     buttonLapPhieuXuatHang.Visible = true;
@@ -64,6 +65,7 @@ namespace QuanLyCacDaiLi
                     break;
                 case LevelOfAccess.User:
 
+                    buttonTiepNhanDaiLy.Visible = false;
                     buttonTraCuuDaiLy.Visible = false;
                     buttonLapBaoCaoThang.Visible = false;
                     buttonLapPhieuXuatHang.Visible = true;
