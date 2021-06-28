@@ -30,6 +30,7 @@ namespace QuanLyCacDaiLi
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.button1 = new System.Windows.Forms.Button();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.groupBoxDanhSachDaiLy = new System.Windows.Forms.GroupBox();
             this.dataGridViewDanhSachDaiLy = new System.Windows.Forms.DataGridView();
@@ -69,6 +70,17 @@ namespace QuanLyCacDaiLi
             this.splitContainer1.SplitterDistance = 100;
             this.splitContainer1.SplitterWidth = 20;
             this.splitContainer1.TabIndex = 11;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(822, 15);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(158, 39);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Thêm đại lý";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBoxTitle
             // 
@@ -114,6 +126,7 @@ namespace QuanLyCacDaiLi
             // 
             // groupBoxTimDaiLy
             // 
+            this.groupBoxTimDaiLy.Controls.Add(this.button1);
             this.groupBoxTimDaiLy.Controls.Add(this.textBoxTimDaiLyData);
             this.groupBoxTimDaiLy.Controls.Add(this.textBoxTimDaiLy);
             this.groupBoxTimDaiLy.Dock = System.Windows.Forms.DockStyle.Top;
@@ -185,5 +198,6 @@ namespace QuanLyCacDaiLi
         private System.Windows.Forms.DataGridViewComboBoxColumn Loai;
         private System.Windows.Forms.DataGridViewComboBoxColumn Quan;
         private System.Windows.Forms.DataGridViewTextBoxColumn TienNo;
+        private System.Windows.Forms.Button button1;
     }
 }

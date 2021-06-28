@@ -10,7 +10,8 @@ namespace QuanLyCacDaiLi
 {
     public partial class FormThemDaiLy : Form
     {
-        public delegate void ThemDaiLyDelegate(string tenDaiLy, int loai, string quan);
+        public delegate void ThemDaiLyDelegate(string tenDaiLy, string sdt, string quan, 
+            string email, int loai, string diachi, DateTime ngaytiepnhan);
         public ThemDaiLyDelegate ThemDaiLyEvent;
 
         public FormThemDaiLy()
@@ -27,7 +28,13 @@ namespace QuanLyCacDaiLi
         {
             if (ValidifyName())
             {
-                ThemDaiLyEvent.Invoke(textBoxTenDaiLyData.Text, int.Parse(comboBoxLoaiDaiLyData.Text), comboBoxQuanData.Text);
+                ThemDaiLyEvent.Invoke(textBoxTenDaiLyData.Text,
+                    textBoxSoDienThoaiData.Text,
+                    comboBoxQuanData.Text,
+                    textBoxEmailData.Text,
+                    int.Parse(comboBoxLoaiDaiLyData.Text),
+                    textBoxDiaChiData.Text,
+                    dateTimePickerNgayTiepNhanData.Value);
                 Close();
             }
         }

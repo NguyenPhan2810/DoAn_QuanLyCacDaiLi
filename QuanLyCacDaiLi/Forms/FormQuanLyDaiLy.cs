@@ -23,6 +23,25 @@ namespace QuanLyCacDaiLi
             LoadTable();
         }
 
+        private void textBoxTimDaiLy_TextChanged(object sender, EventArgs e)
+        {
+            findingName = textBoxTimDaiLyData.Text;
+
+            LoadTable();
+        }
+
+        private void FormQuanLyDaiLy_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FormProvider.GetFormMain().Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var formThemDaiLy = new FormThemDaiLy();
+            formThemDaiLy.ThemDaiLyEvent += ThemDaiLyEvent;
+            formThemDaiLy.Show();
+        }
+
         private void LoadTable()
         {
             string query = @"select STT as 'Số thứ tự',
@@ -40,16 +59,27 @@ namespace QuanLyCacDaiLi
             dataGridViewDanhSachDaiLy.DataSource = dt;
         }
 
-        private void textBoxTimDaiLy_TextChanged(object sender, EventArgs e)
+        private void ThemDaiLyEvent(string tenDaiLy, string sdt, string quan,
+            string email, int loai, string diachi, DateTime ngaytiepnhan)
         {
-            findingName = textBoxTimDaiLyData.Text;
+            string date = ngaytiepnhan.ToString("yyyy'-'MM'-'dd");
+
+            string query = @$"INSERT DAILY
+                            VALUES(
+                            (SELECT COUNT(TENDAILY) FROM DAILY) + 1,
+                            N'{tenDaiLy}', 
+                            '{sdt}', 
+                            N'{quan}', 
+                            '{email}',  
+                            {loai},
+                            N'{diachi}',
+                            '{date}',  
+                            14000)";
+
+
+            DatabaseHelper.ExecuteQuery(query);
 
             LoadTable();
-        }
-
-        private void FormQuanLyDaiLy_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            FormProvider.GetFormMain().Show();
         }
     }
 }
