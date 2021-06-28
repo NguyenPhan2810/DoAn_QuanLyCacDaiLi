@@ -68,7 +68,7 @@ namespace QuanLyCacDaiLi
             this.splitContainer1.Panel2MinSize = 200;
             this.splitContainer1.Size = new System.Drawing.Size(992, 695);
             this.splitContainer1.SplitterDistance = 100;
-            this.splitContainer1.SplitterWidth = 20;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 11;
             // 
             // textBoxTitle
@@ -93,7 +93,7 @@ namespace QuanLyCacDaiLi
             this.groupBoxDanhSachDaiLy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxDanhSachDaiLy.Location = new System.Drawing.Point(0, 60);
             this.groupBoxDanhSachDaiLy.Name = "groupBoxDanhSachDaiLy";
-            this.groupBoxDanhSachDaiLy.Size = new System.Drawing.Size(992, 515);
+            this.groupBoxDanhSachDaiLy.Size = new System.Drawing.Size(992, 530);
             this.groupBoxDanhSachDaiLy.TabIndex = 3;
             this.groupBoxDanhSachDaiLy.TabStop = false;
             this.groupBoxDanhSachDaiLy.Text = "Danh sách đại lý";
@@ -113,7 +113,7 @@ namespace QuanLyCacDaiLi
             this.dataGridViewDanhSachDaiLy.ReadOnly = true;
             this.dataGridViewDanhSachDaiLy.RowHeadersWidth = 51;
             this.dataGridViewDanhSachDaiLy.RowTemplate.Height = 29;
-            this.dataGridViewDanhSachDaiLy.Size = new System.Drawing.Size(986, 489);
+            this.dataGridViewDanhSachDaiLy.Size = new System.Drawing.Size(986, 504);
             this.dataGridViewDanhSachDaiLy.TabIndex = 1;
             // 
             // groupBoxTimDaiLy
