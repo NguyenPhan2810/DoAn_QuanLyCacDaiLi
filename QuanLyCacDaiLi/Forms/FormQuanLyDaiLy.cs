@@ -21,6 +21,8 @@ namespace QuanLyCacDaiLi
         private void TraCuuDaiLy_Load(object sender, EventArgs e)
         {
             LoadTable();
+
+            dataGridViewDanhSachDaiLy.Sort(dataGridViewDanhSachDaiLy.Columns[0], ListSortDirection.Ascending);
         }
 
         private void textBoxTimDaiLy_TextChanged(object sender, EventArgs e)

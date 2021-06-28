@@ -30,11 +30,11 @@ namespace QuanLyCacDaiLi
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.button1 = new System.Windows.Forms.Button();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.groupBoxDanhSachDaiLy = new System.Windows.Forms.GroupBox();
             this.dataGridViewDanhSachDaiLy = new System.Windows.Forms.DataGridView();
             this.groupBoxTimDaiLy = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.textBoxTimDaiLyData = new System.Windows.Forms.TextBox();
             this.textBoxTimDaiLy = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -71,17 +71,6 @@ namespace QuanLyCacDaiLi
             this.splitContainer1.SplitterWidth = 20;
             this.splitContainer1.TabIndex = 11;
             // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(822, 15);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(158, 39);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Thêm đại lý";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // textBoxTitle
             // 
             this.textBoxTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(200)))));
@@ -111,6 +100,8 @@ namespace QuanLyCacDaiLi
             // 
             // dataGridViewDanhSachDaiLy
             // 
+            this.dataGridViewDanhSachDaiLy.AllowUserToAddRows = false;
+            this.dataGridViewDanhSachDaiLy.AllowUserToDeleteRows = false;
             this.dataGridViewDanhSachDaiLy.AllowUserToOrderColumns = true;
             this.dataGridViewDanhSachDaiLy.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewDanhSachDaiLy.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -119,6 +110,7 @@ namespace QuanLyCacDaiLi
             this.dataGridViewDanhSachDaiLy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewDanhSachDaiLy.Location = new System.Drawing.Point(3, 23);
             this.dataGridViewDanhSachDaiLy.Name = "dataGridViewDanhSachDaiLy";
+            this.dataGridViewDanhSachDaiLy.ReadOnly = true;
             this.dataGridViewDanhSachDaiLy.RowHeadersWidth = 51;
             this.dataGridViewDanhSachDaiLy.RowTemplate.Height = 29;
             this.dataGridViewDanhSachDaiLy.Size = new System.Drawing.Size(986, 489);
@@ -135,6 +127,17 @@ namespace QuanLyCacDaiLi
             this.groupBoxTimDaiLy.Size = new System.Drawing.Size(992, 60);
             this.groupBoxTimDaiLy.TabIndex = 2;
             this.groupBoxTimDaiLy.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(822, 15);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(158, 39);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Thêm đại lý";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBoxTimDaiLyData
             // 

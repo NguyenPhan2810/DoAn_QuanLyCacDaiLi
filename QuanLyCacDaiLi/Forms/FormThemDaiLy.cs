@@ -19,14 +19,20 @@ namespace QuanLyCacDaiLi
             InitializeComponent();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void FormThemDaiLy_Load(object sender, EventArgs e)
         {
-            ValidifyName();
+            comboBoxLoaiDaiLyData.SelectedIndex = 0;
+            comboBoxQuanData.SelectedIndex = 0;
+        }
+
+        private void textBoxTenDaiLyData_Leave(object sender, EventArgs e)
+        {
+            ValidifyTenDaiLy();
         }
 
         private void buttonThemDaiLy_Click(object sender, EventArgs e)
         {
-            if (ValidifyName())
+            if (ValidifyFields())
             {
                 ThemDaiLyEvent.Invoke(textBoxTenDaiLyData.Text,
                     textBoxSoDienThoaiData.Text,
@@ -39,17 +45,33 @@ namespace QuanLyCacDaiLi
             }
         }
 
-        // Check if giving name is valid
+        // Check if fields is valid
         // Return true if valid and false otherwise
-        private bool ValidifyName()
+        private bool ValidifyFields()
         {
-            string query = $"select TENDAILY from DAILY where TENDAILY = '{textBoxTenDaiLyData}'";
+            if (textBoxTenDaiLyData.Text == "" ||
+                textBoxSoDienThoaiData.Text == "" ||
+                comboBoxQuanData.Text == "" ||
+                textBoxEmailData.Text == "" ||
+                textBoxDiaChiData.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin ! ", "Lỗi");
+                return false;
+            }   
+
+            return true;
+        }
+
+        private bool ValidifyTenDaiLy()
+        {
+            string query = $"select TENDAILY from DAILY where TENDAILY = '{textBoxTenDaiLyData.Text}'";
 
             var dt = DatabaseHelper.GetDataTable(query);
 
             if (dt.Rows.Count > 0)
             {
-                MessageBox.Show("Tên đã bị trùng, vui lòng chọn tên khác.", "Lỗi");
+                MessageBox.Show("Tên đã bị trùng, vui lòng chọn tên khác ! ", "Lỗi");
+                textBoxTenDaiLyData.Focus();
                 return false;
             }
 

@@ -95,7 +95,7 @@ namespace QuanLyCacDaiLi
             this.textBoxTenDaiLyData.Name = "textBoxTenDaiLyData";
             this.textBoxTenDaiLyData.Size = new System.Drawing.Size(405, 39);
             this.textBoxTenDaiLyData.TabIndex = 3;
-            this.textBoxTenDaiLyData.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBoxTenDaiLyData.Leave += new System.EventHandler(this.textBoxTenDaiLyData_Leave);
             // 
             // comboBoxLoaiDaiLyData
             // 
@@ -267,6 +267,7 @@ namespace QuanLyCacDaiLi
             this.MaximizeBox = false;
             this.Name = "FormThemDaiLy";
             this.Text = "Thêm đại lý";
+            this.Load += new System.EventHandler(this.FormThemDaiLy_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
