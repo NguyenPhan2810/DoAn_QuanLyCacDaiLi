@@ -29,26 +29,14 @@ namespace QuanLyCacDaiLi
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonTiepNhanDaiLy = new System.Windows.Forms.Button();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
-            this.buttonTraCuuDaiLy = new System.Windows.Forms.Button();
+            this.buttonQuanLyDaiLy = new System.Windows.Forms.Button();
             this.buttonLapBaoCaoThang = new System.Windows.Forms.Button();
             this.buttonLapPhieuXuatHang = new System.Windows.Forms.Button();
             this.buttonLapHoaPhieuThuTien = new System.Windows.Forms.Button();
             this.buttonThayDoiQuyDinh = new System.Windows.Forms.Button();
             this.buttonLogOut = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // buttonTiepNhanDaiLy
-            // 
-            this.buttonTiepNhanDaiLy.BackColor = System.Drawing.Color.White;
-            this.buttonTiepNhanDaiLy.Font = new System.Drawing.Font("Nunito SemiBold", 17F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.buttonTiepNhanDaiLy.Location = new System.Drawing.Point(12, 163);
-            this.buttonTiepNhanDaiLy.Name = "buttonTiepNhanDaiLy";
-            this.buttonTiepNhanDaiLy.Size = new System.Drawing.Size(402, 83);
-            this.buttonTiepNhanDaiLy.TabIndex = 0;
-            this.buttonTiepNhanDaiLy.Text = "Tiếp Nhận Đại Lý";
-            this.buttonTiepNhanDaiLy.UseVisualStyleBackColor = false;
             // 
             // textBoxTitle
             // 
@@ -65,16 +53,17 @@ namespace QuanLyCacDaiLi
             this.textBoxTitle.Text = "Xin chào Admin";
             this.textBoxTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // buttonTraCuuDaiLy
+            // buttonQuanLyDaiLy
             // 
-            this.buttonTraCuuDaiLy.BackColor = System.Drawing.Color.White;
-            this.buttonTraCuuDaiLy.Font = new System.Drawing.Font("Nunito SemiBold", 17F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.buttonTraCuuDaiLy.Location = new System.Drawing.Point(12, 252);
-            this.buttonTraCuuDaiLy.Name = "buttonTraCuuDaiLy";
-            this.buttonTraCuuDaiLy.Size = new System.Drawing.Size(402, 83);
-            this.buttonTraCuuDaiLy.TabIndex = 9;
-            this.buttonTraCuuDaiLy.Text = "Tra Cứu Đại Lý";
-            this.buttonTraCuuDaiLy.UseVisualStyleBackColor = false;
+            this.buttonQuanLyDaiLy.BackColor = System.Drawing.Color.White;
+            this.buttonQuanLyDaiLy.Font = new System.Drawing.Font("Nunito SemiBold", 17F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.buttonQuanLyDaiLy.Location = new System.Drawing.Point(487, 163);
+            this.buttonQuanLyDaiLy.Name = "buttonQuanLyDaiLy";
+            this.buttonQuanLyDaiLy.Size = new System.Drawing.Size(402, 83);
+            this.buttonQuanLyDaiLy.TabIndex = 9;
+            this.buttonQuanLyDaiLy.Text = "Quản Lý Đại Lý";
+            this.buttonQuanLyDaiLy.UseVisualStyleBackColor = false;
+            this.buttonQuanLyDaiLy.Click += new System.EventHandler(this.buttonQuanLyDaiLy_Click);
             // 
             // buttonLapBaoCaoThang
             // 
@@ -91,7 +80,7 @@ namespace QuanLyCacDaiLi
             // 
             this.buttonLapPhieuXuatHang.BackColor = System.Drawing.Color.White;
             this.buttonLapPhieuXuatHang.Font = new System.Drawing.Font("Nunito SemiBold", 17F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.buttonLapPhieuXuatHang.Location = new System.Drawing.Point(487, 163);
+            this.buttonLapPhieuXuatHang.Location = new System.Drawing.Point(12, 163);
             this.buttonLapPhieuXuatHang.Name = "buttonLapPhieuXuatHang";
             this.buttonLapPhieuXuatHang.Size = new System.Drawing.Size(402, 83);
             this.buttonLapPhieuXuatHang.TabIndex = 12;
@@ -102,7 +91,7 @@ namespace QuanLyCacDaiLi
             // 
             this.buttonLapHoaPhieuThuTien.BackColor = System.Drawing.Color.White;
             this.buttonLapHoaPhieuThuTien.Font = new System.Drawing.Font("Nunito SemiBold", 17F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.buttonLapHoaPhieuThuTien.Location = new System.Drawing.Point(487, 252);
+            this.buttonLapHoaPhieuThuTien.Location = new System.Drawing.Point(12, 252);
             this.buttonLapHoaPhieuThuTien.Name = "buttonLapHoaPhieuThuTien";
             this.buttonLapHoaPhieuThuTien.Size = new System.Drawing.Size(402, 83);
             this.buttonLapHoaPhieuThuTien.TabIndex = 13;
@@ -113,7 +102,7 @@ namespace QuanLyCacDaiLi
             // 
             this.buttonThayDoiQuyDinh.BackColor = System.Drawing.Color.White;
             this.buttonThayDoiQuyDinh.Font = new System.Drawing.Font("Nunito SemiBold", 17F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.buttonThayDoiQuyDinh.Location = new System.Drawing.Point(487, 341);
+            this.buttonThayDoiQuyDinh.Location = new System.Drawing.Point(487, 252);
             this.buttonThayDoiQuyDinh.Name = "buttonThayDoiQuyDinh";
             this.buttonThayDoiQuyDinh.Size = new System.Drawing.Size(402, 83);
             this.buttonThayDoiQuyDinh.TabIndex = 14;
@@ -141,9 +130,8 @@ namespace QuanLyCacDaiLi
             this.Controls.Add(this.buttonLapHoaPhieuThuTien);
             this.Controls.Add(this.buttonLapPhieuXuatHang);
             this.Controls.Add(this.buttonLapBaoCaoThang);
-            this.Controls.Add(this.buttonTraCuuDaiLy);
+            this.Controls.Add(this.buttonQuanLyDaiLy);
             this.Controls.Add(this.textBoxTitle);
-            this.Controls.Add(this.buttonTiepNhanDaiLy);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormMain";
             this.Text = "Chọn chức năng";
@@ -156,8 +144,7 @@ namespace QuanLyCacDaiLi
         #endregion
 
         private System.Windows.Forms.TextBox textBoxTitle;
-        private System.Windows.Forms.Button buttonTiepNhanDaiLy;
-        private System.Windows.Forms.Button buttonTraCuuDaiLy;
+        private System.Windows.Forms.Button buttonQuanLyDaiLy;
         private System.Windows.Forms.Button buttonLapBaoCaoThang;
         private System.Windows.Forms.Button buttonLapPhieuXuatHang;
         private System.Windows.Forms.Button buttonLapHoaPhieuThuTien;

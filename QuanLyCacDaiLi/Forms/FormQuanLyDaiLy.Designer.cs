@@ -57,15 +57,16 @@ namespace QuanLyCacDaiLi
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(200)))));
             this.splitContainer1.Panel1.Controls.Add(this.textBoxTitle);
-            this.splitContainer1.Panel1MinSize = 200;
+            this.splitContainer1.Panel1MinSize = 100;
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(200)))));
             this.splitContainer1.Panel2.Controls.Add(this.groupBoxDanhSachDaiLy);
             this.splitContainer1.Panel2.Controls.Add(this.groupBoxTimDaiLy);
-            this.splitContainer1.Size = new System.Drawing.Size(782, 476);
-            this.splitContainer1.SplitterDistance = 236;
+            this.splitContainer1.Panel2MinSize = 200;
+            this.splitContainer1.Size = new System.Drawing.Size(992, 695);
+            this.splitContainer1.SplitterDistance = 100;
             this.splitContainer1.SplitterWidth = 20;
             this.splitContainer1.TabIndex = 11;
             // 
@@ -80,7 +81,7 @@ namespace QuanLyCacDaiLi
             this.textBoxTitle.Location = new System.Drawing.Point(0, 0);
             this.textBoxTitle.Name = "textBoxTitle";
             this.textBoxTitle.ReadOnly = true;
-            this.textBoxTitle.Size = new System.Drawing.Size(782, 91);
+            this.textBoxTitle.Size = new System.Drawing.Size(992, 91);
             this.textBoxTitle.TabIndex = 9;
             this.textBoxTitle.Text = "Danh Sách Các Đại Lý";
             this.textBoxTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -91,15 +92,16 @@ namespace QuanLyCacDaiLi
             this.groupBoxDanhSachDaiLy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxDanhSachDaiLy.Location = new System.Drawing.Point(0, 60);
             this.groupBoxDanhSachDaiLy.Name = "groupBoxDanhSachDaiLy";
-            this.groupBoxDanhSachDaiLy.Size = new System.Drawing.Size(782, 160);
+            this.groupBoxDanhSachDaiLy.Size = new System.Drawing.Size(992, 515);
             this.groupBoxDanhSachDaiLy.TabIndex = 3;
             this.groupBoxDanhSachDaiLy.TabStop = false;
             this.groupBoxDanhSachDaiLy.Text = "Danh sách đại lý";
             // 
             // dataGridViewDanhSachDaiLy
             // 
+            this.dataGridViewDanhSachDaiLy.AllowUserToOrderColumns = true;
             this.dataGridViewDanhSachDaiLy.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewDanhSachDaiLy.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
+            this.dataGridViewDanhSachDaiLy.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewDanhSachDaiLy.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewDanhSachDaiLy.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDanhSachDaiLy.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -107,7 +109,7 @@ namespace QuanLyCacDaiLi
             this.dataGridViewDanhSachDaiLy.Name = "dataGridViewDanhSachDaiLy";
             this.dataGridViewDanhSachDaiLy.RowHeadersWidth = 51;
             this.dataGridViewDanhSachDaiLy.RowTemplate.Height = 29;
-            this.dataGridViewDanhSachDaiLy.Size = new System.Drawing.Size(776, 134);
+            this.dataGridViewDanhSachDaiLy.Size = new System.Drawing.Size(986, 489);
             this.dataGridViewDanhSachDaiLy.TabIndex = 1;
             // 
             // groupBoxTimDaiLy
@@ -117,7 +119,7 @@ namespace QuanLyCacDaiLi
             this.groupBoxTimDaiLy.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBoxTimDaiLy.Location = new System.Drawing.Point(0, 0);
             this.groupBoxTimDaiLy.Name = "groupBoxTimDaiLy";
-            this.groupBoxTimDaiLy.Size = new System.Drawing.Size(782, 60);
+            this.groupBoxTimDaiLy.Size = new System.Drawing.Size(992, 60);
             this.groupBoxTimDaiLy.TabIndex = 2;
             this.groupBoxTimDaiLy.TabStop = false;
             // 
@@ -150,11 +152,12 @@ namespace QuanLyCacDaiLi
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(200)))));
-            this.ClientSize = new System.Drawing.Size(782, 476);
+            this.ClientSize = new System.Drawing.Size(992, 695);
             this.Controls.Add(this.splitContainer1);
             this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "FormQuanLyDaiLy";
             this.Text = "TraCuuDaiLy";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormQuanLyDaiLy_FormClosed);
             this.Load += new System.EventHandler(this.TraCuuDaiLy_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
@@ -177,5 +180,10 @@ namespace QuanLyCacDaiLi
         private System.Windows.Forms.TextBox textBoxTimDaiLy;
         private System.Windows.Forms.GroupBox groupBoxTimDaiLy;
         private System.Windows.Forms.GroupBox groupBoxDanhSachDaiLy;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenDaiLy;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Loai;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Quan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TienNo;
     }
 }

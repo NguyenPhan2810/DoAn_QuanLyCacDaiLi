@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace QuanLyCacDaiLi
 {
@@ -44,6 +45,11 @@ namespace QuanLyCacDaiLi
             findingName = textBoxTimDaiLyData.Text;
 
             LoadTable();
+        }
+
+        private void FormQuanLyDaiLy_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FormProvider.GetFormMain().Show();
         }
     }
 }

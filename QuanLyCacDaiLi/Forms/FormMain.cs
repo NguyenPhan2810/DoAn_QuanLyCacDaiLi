@@ -55,8 +55,7 @@ namespace QuanLyCacDaiLi
                     break;
                 case LevelOfAccess.Admin:
 
-                    buttonTiepNhanDaiLy.Visible = true;
-                    buttonTraCuuDaiLy.Visible = true;
+                    buttonQuanLyDaiLy.Visible = true;
                     buttonLapBaoCaoThang.Visible = true;
                     buttonLapPhieuXuatHang.Visible = true;
                     buttonLapHoaPhieuThuTien.Visible = true;
@@ -65,8 +64,7 @@ namespace QuanLyCacDaiLi
                     break;
                 case LevelOfAccess.User:
 
-                    buttonTiepNhanDaiLy.Visible = false;
-                    buttonTraCuuDaiLy.Visible = false;
+                    buttonQuanLyDaiLy.Visible = false;
                     buttonLapBaoCaoThang.Visible = false;
                     buttonLapPhieuXuatHang.Visible = true;
                     buttonLapHoaPhieuThuTien.Visible = false;
@@ -76,6 +74,12 @@ namespace QuanLyCacDaiLi
                 default:
                     break;
             }
+        }
+
+        private void buttonQuanLyDaiLy_Click(object sender, EventArgs e)
+        {
+            FormProvider.GetFormQuanLyDaiLy().Show();
+            Hide();
         }
     }
 }
