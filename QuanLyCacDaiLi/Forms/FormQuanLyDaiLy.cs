@@ -76,7 +76,7 @@ namespace QuanLyCacDaiLi
                             {loai},
                             N'{diachi}',
                             '{date}',  
-                            14000)";
+                            0)";
 
 
             DatabaseHelper.ExecuteQuery(query);
