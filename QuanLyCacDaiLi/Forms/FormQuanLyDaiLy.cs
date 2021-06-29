@@ -21,7 +21,6 @@ namespace QuanLyCacDaiLi
         private void TraCuuDaiLy_Load(object sender, EventArgs e)
         {
             LoadTable();
-
             dataGridViewDanhSachDaiLy.Sort(dataGridViewDanhSachDaiLy.Columns[0], ListSortDirection.Ascending);
         }
 
@@ -46,6 +45,7 @@ namespace QuanLyCacDaiLi
 
         private void LoadTable()
         {
+            // Generate query
             string query = @"select STT as 'Số thứ tự',
                                     TENDAILY as 'Tên đại lý',
                                     LOAI as 'Loại',
@@ -56,9 +56,25 @@ namespace QuanLyCacDaiLi
             if (findingName != "" && findingName != null)
                 query += $"where DAILY.TENDAILY like '%{findingName}%'";
 
+            // Query and get datatable
             var dt = DatabaseHelper.GetDataTable(query);
 
+            // Preserve sorted column and order
+            var lastSortedColumn = dataGridViewDanhSachDaiLy.SortedColumn;
+            var lastSortedColumnIndex = -1;
+            if (lastSortedColumn != null)
+                lastSortedColumnIndex = lastSortedColumn.Index;
+
+            var lastSortedColumnSortDirection = ListSortDirection.Ascending;
+            if (dataGridViewDanhSachDaiLy.SortOrder == SortOrder.Descending)
+                lastSortedColumnSortDirection = ListSortDirection.Descending;
+
+            // Update datasource of the DataGridView
             dataGridViewDanhSachDaiLy.DataSource = dt;
+
+            // Resture sorted column and order
+            if (lastSortedColumn != null)
+                dataGridViewDanhSachDaiLy.Sort(dataGridViewDanhSachDaiLy.Columns[lastSortedColumnIndex], lastSortedColumnSortDirection);
         }
 
         private void ThemDaiLyEvent(string tenDaiLy, string sdt, string quan,

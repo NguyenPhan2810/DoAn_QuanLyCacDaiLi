@@ -41,6 +41,7 @@ namespace QuanLyCacDaiLi
                     int.Parse(comboBoxLoaiDaiLyData.Text),
                     textBoxDiaChiData.Text,
                     dateTimePickerNgayTiepNhanData.Value);
+
                 Close();
             }
         }
