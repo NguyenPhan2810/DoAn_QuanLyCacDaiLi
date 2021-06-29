@@ -98,6 +98,7 @@ namespace QuanLyCacDaiLi
             this.buttonLapHoaPhieuThuTien.TabIndex = 13;
             this.buttonLapHoaPhieuThuTien.Text = "Lập Hoá Phiếu Thu Tiền";
             this.buttonLapHoaPhieuThuTien.UseVisualStyleBackColor = false;
+            this.buttonLapHoaPhieuThuTien.Click += new System.EventHandler(this.buttonLapHoaPhieuThuTien_Click);
             // 
             // buttonThayDoiQuyDinh
             // 

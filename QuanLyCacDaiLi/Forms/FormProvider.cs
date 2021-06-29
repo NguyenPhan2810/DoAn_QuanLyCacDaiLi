@@ -37,7 +37,17 @@ namespace QuanLyCacDaiLi
                 newForm = new FormPhieuXuatHang();
                 newForm.FormClosed += (object sender, System.Windows.Forms.FormClosedEventArgs e) => formStorage.Remove(typeof(FormPhieuXuatHang));
             }
-            else 
+            else if (classType == typeof(FormPhieuThuTien))
+            {
+                newForm = new FormPhieuThuTien();
+                newForm.FormClosed += (object sender, System.Windows.Forms.FormClosedEventArgs e) => formStorage.Remove(typeof(FormPhieuThuTien));
+            }
+            else if (classType == typeof(FormThemDaiLy))
+            {
+                newForm = new FormThemDaiLy();
+                newForm.FormClosed += (object sender, System.Windows.Forms.FormClosedEventArgs e) => formStorage.Remove(typeof(FormThemDaiLy));
+            }
+            else
                 return null;
 
             

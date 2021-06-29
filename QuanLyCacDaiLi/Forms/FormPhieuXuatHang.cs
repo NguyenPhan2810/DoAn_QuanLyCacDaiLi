@@ -205,7 +205,6 @@ namespace QuanLyCacDaiLi
             cellThanhTien.Value = uint.Parse(cellSoLuong.Value.ToString()) * uint.Parse(cellDonGia.Value.ToString());
         }
 
-
         private void XuatPhieu()
         {
             // Kiểm tra điều kiện
@@ -236,7 +235,7 @@ namespace QuanLyCacDaiLi
 
             var query = @$"select LOAIDAILY.LOAI, TIENNO, TIENNOMAX 
                            from DAILY join LOAIDAILY on DAILY.LOAI = LOAIDAILY.LOAI
-                           where DAILY.TENDAILY = '{comboBoxTenDaiLyData.SelectedItem.ToString()}'";
+                           where DAILY.TENDAILY = N'{comboBoxTenDaiLyData.SelectedItem.ToString()}'";
             var dtDaiLyJoinLoaiDaiLy = DatabaseHelper.GetDataTable(query);
 
             uint tienNo = uint.Parse(dtDaiLyJoinLoaiDaiLy.Rows[0]["TIENNO"].ToString()) + tongThanhTien;
@@ -259,7 +258,7 @@ namespace QuanLyCacDaiLi
                 // Cập nhật tiền nợ
                 DatabaseHelper.ExecuteQuery($"update DAILY set TIENNO = {tienNo} where DAILY.TENDAILY = '{comboBoxTenDaiLyData.SelectedItem.ToString()}'");
 
-                var maPhieuXuat = 1 + uint.Parse(DatabaseHelper.GetDataTable("SELECT COUNT(MaPhieuXuat) FROM DSPHIEUXUAT").Rows[0].ItemArray[0].ToString());
+                var maPhieuXuat = DatabaseHelper.GetDataTable("SELECT COUNT(MaPhieuXuat) + 1 FROM DSPHIEUXUAT").Rows[0][0].ToString();
                 var tenDaiLy = comboBoxTenDaiLyData.SelectedItem.ToString();
                 var ngayLapPhieu = dateTimePickerNgayLapPhieuData.Value.ToString("yyyy'-'MM'-'dd");
                 // Cập nhật danh sách phiếu xuất

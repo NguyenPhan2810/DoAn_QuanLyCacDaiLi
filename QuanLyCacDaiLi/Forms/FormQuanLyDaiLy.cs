@@ -38,7 +38,7 @@ namespace QuanLyCacDaiLi
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var formThemDaiLy = new FormThemDaiLy();
+            var formThemDaiLy = FormProvider.GetForm(typeof(FormThemDaiLy)) as FormThemDaiLy;
             formThemDaiLy.ThemDaiLyEvent += ThemDaiLyEvent;
             formThemDaiLy.FormClosed += (object sender, System.Windows.Forms.FormClosedEventArgs e) => this.Enabled = true;
             formThemDaiLy.Show();

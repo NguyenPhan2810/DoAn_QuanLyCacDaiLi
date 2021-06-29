@@ -57,6 +57,11 @@ namespace QuanLyCacDaiLi
             FormProvider.GetForm(typeof(FormPhieuXuatHang)).Show();
         }
 
+        private void buttonLapHoaPhieuThuTien_Click(object sender, EventArgs e)
+        {
+            FormProvider.GetForm(typeof(FormPhieuThuTien)).Show();
+        }
+
         public void SetLevelOfAccess(LevelOfAccess loa)
         {
             levelOfAccess = loa;
