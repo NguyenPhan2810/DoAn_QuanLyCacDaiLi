@@ -76,6 +76,7 @@ namespace QuanLyCacDaiLi
             this.buttonLapBaoCaoDoanhSo.TabIndex = 11;
             this.buttonLapBaoCaoDoanhSo.Text = "Lập Báo Cáo Doanh Số";
             this.buttonLapBaoCaoDoanhSo.UseVisualStyleBackColor = false;
+            this.buttonLapBaoCaoDoanhSo.Click += new System.EventHandler(this.buttonLapBaoCaoDoanhSo_Click);
             // 
             // buttonLapPhieuXuatHang
             // 

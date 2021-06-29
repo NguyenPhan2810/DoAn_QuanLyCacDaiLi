@@ -240,6 +240,8 @@ namespace QuanLyCacDaiLi
             this.Controls.Add(this.textBoxNgayLapPhieu);
             this.Controls.Add(this.textBoxDaiLy);
             this.Controls.Add(this.textBoxTitle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormPhieuThuTien";
             this.Load += new System.EventHandler(this.FormPhieuThuTien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSoTienThu)).EndInit();

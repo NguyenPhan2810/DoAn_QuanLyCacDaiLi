@@ -20,32 +20,44 @@ namespace QuanLyCacDaiLi
             if (classType == typeof(FormMain))
             {
                 newForm = new FormMain();
-                newForm.FormClosed += (object sender, System.Windows.Forms.FormClosedEventArgs e) => formStorage.Remove(typeof(FormMain));
+                newForm.FormClosed += (object sender, System.Windows.Forms.FormClosedEventArgs e) 
+                    => formStorage.Remove(typeof(FormMain));
             }
             else if (classType == typeof(FormLogIn))
             {
                 newForm = new FormLogIn();
-                newForm.FormClosed += (object sender, System.Windows.Forms.FormClosedEventArgs e) => formStorage.Remove(typeof(FormLogIn));
+                newForm.FormClosed += (object sender, System.Windows.Forms.FormClosedEventArgs e) 
+                    => formStorage.Remove(typeof(FormLogIn));
             }
             else if (classType == typeof(FormQuanLyDaiLy))
             {
                 newForm = new FormQuanLyDaiLy();
-                newForm.FormClosed += (object sender, System.Windows.Forms.FormClosedEventArgs e) => formStorage.Remove(typeof(FormQuanLyDaiLy));
+                newForm.FormClosed += (object sender, System.Windows.Forms.FormClosedEventArgs e) 
+                    => formStorage.Remove(typeof(FormQuanLyDaiLy));
             }
             else if (classType == typeof(FormPhieuXuatHang))
             {
                 newForm = new FormPhieuXuatHang();
-                newForm.FormClosed += (object sender, System.Windows.Forms.FormClosedEventArgs e) => formStorage.Remove(typeof(FormPhieuXuatHang));
+                newForm.FormClosed += (object sender, System.Windows.Forms.FormClosedEventArgs e) 
+                    => formStorage.Remove(typeof(FormPhieuXuatHang));
             }
             else if (classType == typeof(FormPhieuThuTien))
             {
                 newForm = new FormPhieuThuTien();
-                newForm.FormClosed += (object sender, System.Windows.Forms.FormClosedEventArgs e) => formStorage.Remove(typeof(FormPhieuThuTien));
+                newForm.FormClosed += (object sender, System.Windows.Forms.FormClosedEventArgs e) 
+                    => formStorage.Remove(typeof(FormPhieuThuTien));
             }
             else if (classType == typeof(FormThemDaiLy))
             {
                 newForm = new FormThemDaiLy();
-                newForm.FormClosed += (object sender, System.Windows.Forms.FormClosedEventArgs e) => formStorage.Remove(typeof(FormThemDaiLy));
+                newForm.FormClosed += (object sender, System.Windows.Forms.FormClosedEventArgs e) 
+                    => formStorage.Remove(typeof(FormThemDaiLy));
+            }
+            else if (classType == typeof(FormBaoCaoDoanhSo))
+            {
+                newForm = new FormBaoCaoDoanhSo();
+                newForm.FormClosed += (object sender, System.Windows.Forms.FormClosedEventArgs e) 
+                    => formStorage.Remove(typeof(FormBaoCaoDoanhSo));
             }
             else
                 return null;

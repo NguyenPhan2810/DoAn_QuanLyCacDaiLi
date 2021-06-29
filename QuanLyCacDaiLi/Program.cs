@@ -17,8 +17,7 @@ namespace QuanLyCacDaiLi
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(FormProvider.GetForm(typeof(FormLogIn)));
-            //Application.Run(new FormPhieuXuatHang());
+            Application.Run(FormProvider.GetForm(typeof(FormBaoCaoDoanhSo)));
         }
     }
 }

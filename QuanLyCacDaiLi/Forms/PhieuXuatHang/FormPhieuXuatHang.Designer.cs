@@ -29,8 +29,8 @@ namespace QuanLyCacDaiLi
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.groupBoxThongTin = new System.Windows.Forms.GroupBox();
             this.buttonXoaMatHang = new System.Windows.Forms.Button();
@@ -70,6 +70,7 @@ namespace QuanLyCacDaiLi
             // 
             // groupBoxThongTin
             // 
+            this.groupBoxThongTin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(200)))));
             this.groupBoxThongTin.Controls.Add(this.buttonXoaMatHang);
             this.groupBoxThongTin.Controls.Add(this.buttonXuatPhieu);
             this.groupBoxThongTin.Controls.Add(this.buttonThemMatHang);
@@ -101,7 +102,7 @@ namespace QuanLyCacDaiLi
             // 
             this.buttonXuatPhieu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonXuatPhieu.Font = new System.Drawing.Font("Nunito", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonXuatPhieu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.buttonXuatPhieu.ForeColor = System.Drawing.Color.Black;
             this.buttonXuatPhieu.Location = new System.Drawing.Point(1014, 88);
             this.buttonXuatPhieu.Name = "buttonXuatPhieu";
             this.buttonXuatPhieu.Size = new System.Drawing.Size(201, 38);
@@ -144,6 +145,7 @@ namespace QuanLyCacDaiLi
             // 
             // textBoxNgayLapPhieu
             // 
+            this.textBoxNgayLapPhieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(200)))));
             this.textBoxNgayLapPhieu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNgayLapPhieu.Font = new System.Drawing.Font("Nunito SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxNgayLapPhieu.Location = new System.Drawing.Point(479, 29);
@@ -157,6 +159,7 @@ namespace QuanLyCacDaiLi
             // 
             // textBoxTenDaiLy
             // 
+            this.textBoxTenDaiLy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(200)))));
             this.textBoxTenDaiLy.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTenDaiLy.Font = new System.Drawing.Font("Nunito SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxTenDaiLy.Location = new System.Drawing.Point(3, 29);
@@ -206,9 +209,9 @@ namespace QuanLyCacDaiLi
             // 
             // MatHang
             // 
-            dataGridViewCellStyle1.NullValue = "Chọn mặt hàng";
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.MatHang.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.NullValue = "Chọn mặt hàng";
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.MatHang.DefaultCellStyle = dataGridViewCellStyle3;
             this.MatHang.HeaderText = "Mặt Hàng";
             this.MatHang.MinimumWidth = 300;
             this.MatHang.Name = "MatHang";
@@ -223,9 +226,9 @@ namespace QuanLyCacDaiLi
             // 
             // SoLuong
             // 
-            dataGridViewCellStyle2.Format = "N0";
-            dataGridViewCellStyle2.NullValue = null;
-            this.SoLuong.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Format = "N0";
+            dataGridViewCellStyle4.NullValue = null;
+            this.SoLuong.DefaultCellStyle = dataGridViewCellStyle4;
             this.SoLuong.FillWeight = 0.1F;
             this.SoLuong.HeaderText = "Số lượng";
             this.SoLuong.MinimumWidth = 100;
