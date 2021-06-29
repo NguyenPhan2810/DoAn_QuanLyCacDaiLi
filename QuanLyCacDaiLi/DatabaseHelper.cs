@@ -15,6 +15,11 @@ namespace QuanLyCacDaiLi
         private static string databaseName = "QLDL";
         private static SqlConnection cnn = null;
 
+        public static void Init()
+        {
+            OpenConnection().Close();
+        }
+
         public static SqlConnection OpenConnection()
         {
 

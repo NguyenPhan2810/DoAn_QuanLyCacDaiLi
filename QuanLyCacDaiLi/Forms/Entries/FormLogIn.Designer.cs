@@ -157,6 +157,7 @@ namespace QuanLyCacDaiLi
             this.MaximizeBox = false;
             this.Name = "FormLogIn";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.FormLogIn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
