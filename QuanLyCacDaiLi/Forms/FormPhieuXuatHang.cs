@@ -72,9 +72,25 @@ namespace QuanLyCacDaiLi
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonThemMatHang_Click(object sender, EventArgs e)
         {
             ThemMatHang();
+        }
+
+        private void buttonXoaMatHang_Click(object sender, EventArgs e)
+        {
+            var selectedRow = dataGridViewMatHang.SelectedRows;
+
+            if (selectedRow.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn ít nhất 1 dòng để xoá.", "Thông báo");
+                return;
+            }
+
+            for(int i = 0; i < selectedRow.Count; ++i)
+            {
+                dataGridViewMatHang.Rows.Remove(selectedRow[i]);
+            }
         }
 
         private void ThemMatHang()
@@ -82,7 +98,7 @@ namespace QuanLyCacDaiLi
             var dtTatCaMatHang = DatabaseHelper.GetDataTable("select TENMATHANG from MATHANG");
 
             // Check if any MatHang left
-            if (dataGridViewMatHang.Rows.Count > dtTatCaMatHang.Rows.Count)
+            if (dataGridViewMatHang.Rows.Count >= dtTatCaMatHang.Rows.Count)
             {
                 MessageBox.Show("Không còn mặt hàng nào khác.", "Thông báo");
                 return;
@@ -121,5 +137,6 @@ namespace QuanLyCacDaiLi
             }
             cellMatHang.DataSource = tenMatHangHopLe;
         }
+
     }
 }

@@ -31,7 +31,8 @@ namespace QuanLyCacDaiLi
         {
             this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.groupBoxThongTin = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonXoaMatHang = new System.Windows.Forms.Button();
+            this.buttonThemMatHang = new System.Windows.Forms.Button();
             this.comboBoxTenDaiLyData = new System.Windows.Forms.ComboBox();
             this.dateTimePickerNgayLapPhieuData = new System.Windows.Forms.DateTimePicker();
             this.textBoxNgayLapPhieu = new System.Windows.Forms.TextBox();
@@ -66,7 +67,8 @@ namespace QuanLyCacDaiLi
             // 
             // groupBoxThongTin
             // 
-            this.groupBoxThongTin.Controls.Add(this.button1);
+            this.groupBoxThongTin.Controls.Add(this.buttonXoaMatHang);
+            this.groupBoxThongTin.Controls.Add(this.buttonThemMatHang);
             this.groupBoxThongTin.Controls.Add(this.comboBoxTenDaiLyData);
             this.groupBoxThongTin.Controls.Add(this.dateTimePickerNgayLapPhieuData);
             this.groupBoxThongTin.Controls.Add(this.textBoxNgayLapPhieu);
@@ -78,16 +80,31 @@ namespace QuanLyCacDaiLi
             this.groupBoxThongTin.TabIndex = 11;
             this.groupBoxThongTin.TabStop = false;
             // 
-            // button1
+            // buttonXoaMatHang
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(6, 88);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 38);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Thêm mặt hàng";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonXoaMatHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonXoaMatHang.Font = new System.Drawing.Font("Nunito", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonXoaMatHang.ForeColor = System.Drawing.Color.Red;
+            this.buttonXoaMatHang.Location = new System.Drawing.Point(213, 88);
+            this.buttonXoaMatHang.Name = "buttonXoaMatHang";
+            this.buttonXoaMatHang.Size = new System.Drawing.Size(201, 38);
+            this.buttonXoaMatHang.TabIndex = 2;
+            this.buttonXoaMatHang.Text = "Xoá mặt hàng";
+            this.buttonXoaMatHang.UseVisualStyleBackColor = true;
+            this.buttonXoaMatHang.Click += new System.EventHandler(this.buttonXoaMatHang_Click);
+            // 
+            // buttonThemMatHang
+            // 
+            this.buttonThemMatHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonThemMatHang.Font = new System.Drawing.Font("Nunito", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonThemMatHang.ForeColor = System.Drawing.Color.Green;
+            this.buttonThemMatHang.Location = new System.Drawing.Point(6, 88);
+            this.buttonThemMatHang.Name = "buttonThemMatHang";
+            this.buttonThemMatHang.Size = new System.Drawing.Size(201, 38);
+            this.buttonThemMatHang.TabIndex = 2;
+            this.buttonThemMatHang.Text = "Thêm mặt hàng";
+            this.buttonThemMatHang.UseVisualStyleBackColor = true;
+            this.buttonThemMatHang.Click += new System.EventHandler(this.buttonThemMatHang_Click);
             // 
             // comboBoxTenDaiLyData
             // 
@@ -241,5 +258,7 @@ namespace QuanLyCacDaiLi
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonXoaMatHang;
+        private System.Windows.Forms.Button buttonThemMatHang;
     }
 }
