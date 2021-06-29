@@ -1,0 +1,245 @@
+﻿
+namespace QuanLyCacDaiLi
+{
+    partial class FormPhieuXuatHang
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.textBoxTitle = new System.Windows.Forms.TextBox();
+            this.groupBoxThongTin = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBoxTenDaiLyData = new System.Windows.Forms.ComboBox();
+            this.dateTimePickerNgayLapPhieuData = new System.Windows.Forms.DateTimePicker();
+            this.textBoxNgayLapPhieu = new System.Windows.Forms.TextBox();
+            this.textBoxTenDaiLy = new System.Windows.Forms.TextBox();
+            this.dataGridViewMatHang = new System.Windows.Forms.DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MatHang = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.DonViTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBoxThongTin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMatHang)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // textBoxTitle
+            // 
+            this.textBoxTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(200)))));
+            this.textBoxTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBoxTitle.Enabled = false;
+            this.textBoxTitle.Font = new System.Drawing.Font("Nunito", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBoxTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.textBoxTitle.Location = new System.Drawing.Point(0, 0);
+            this.textBoxTitle.Name = "textBoxTitle";
+            this.textBoxTitle.ReadOnly = true;
+            this.textBoxTitle.Size = new System.Drawing.Size(1102, 91);
+            this.textBoxTitle.TabIndex = 10;
+            this.textBoxTitle.TabStop = false;
+            this.textBoxTitle.Text = "Phiếu Xuất Hàng";
+            this.textBoxTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // groupBoxThongTin
+            // 
+            this.groupBoxThongTin.Controls.Add(this.button1);
+            this.groupBoxThongTin.Controls.Add(this.comboBoxTenDaiLyData);
+            this.groupBoxThongTin.Controls.Add(this.dateTimePickerNgayLapPhieuData);
+            this.groupBoxThongTin.Controls.Add(this.textBoxNgayLapPhieu);
+            this.groupBoxThongTin.Controls.Add(this.textBoxTenDaiLy);
+            this.groupBoxThongTin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBoxThongTin.Location = new System.Drawing.Point(0, 91);
+            this.groupBoxThongTin.Name = "groupBoxThongTin";
+            this.groupBoxThongTin.Size = new System.Drawing.Size(1102, 132);
+            this.groupBoxThongTin.TabIndex = 11;
+            this.groupBoxThongTin.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.Location = new System.Drawing.Point(6, 88);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(201, 38);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Thêm mặt hàng";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // comboBoxTenDaiLyData
+            // 
+            this.comboBoxTenDaiLyData.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTenDaiLyData.Font = new System.Drawing.Font("Nunito", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboBoxTenDaiLyData.FormattingEnabled = true;
+            this.comboBoxTenDaiLyData.Location = new System.Drawing.Point(114, 26);
+            this.comboBoxTenDaiLyData.Name = "comboBoxTenDaiLyData";
+            this.comboBoxTenDaiLyData.Size = new System.Drawing.Size(339, 40);
+            this.comboBoxTenDaiLyData.TabIndex = 0;
+            // 
+            // dateTimePickerNgayLapPhieuData
+            // 
+            this.dateTimePickerNgayLapPhieuData.CalendarFont = new System.Drawing.Font("Nunito", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePickerNgayLapPhieuData.Font = new System.Drawing.Font("Nunito", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePickerNgayLapPhieuData.Location = new System.Drawing.Point(644, 32);
+            this.dateTimePickerNgayLapPhieuData.Name = "dateTimePickerNgayLapPhieuData";
+            this.dateTimePickerNgayLapPhieuData.Size = new System.Drawing.Size(275, 28);
+            this.dateTimePickerNgayLapPhieuData.TabIndex = 1;
+            // 
+            // textBoxNgayLapPhieu
+            // 
+            this.textBoxNgayLapPhieu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxNgayLapPhieu.Font = new System.Drawing.Font("Nunito SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBoxNgayLapPhieu.Location = new System.Drawing.Point(479, 29);
+            this.textBoxNgayLapPhieu.Name = "textBoxNgayLapPhieu";
+            this.textBoxNgayLapPhieu.ReadOnly = true;
+            this.textBoxNgayLapPhieu.Size = new System.Drawing.Size(159, 32);
+            this.textBoxNgayLapPhieu.TabIndex = 1;
+            this.textBoxNgayLapPhieu.TabStop = false;
+            this.textBoxNgayLapPhieu.Text = "Ngày lập phiếu";
+            this.textBoxNgayLapPhieu.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBoxTenDaiLy
+            // 
+            this.textBoxTenDaiLy.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxTenDaiLy.Font = new System.Drawing.Font("Nunito SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBoxTenDaiLy.Location = new System.Drawing.Point(3, 29);
+            this.textBoxTenDaiLy.Name = "textBoxTenDaiLy";
+            this.textBoxTenDaiLy.ReadOnly = true;
+            this.textBoxTenDaiLy.Size = new System.Drawing.Size(105, 32);
+            this.textBoxTenDaiLy.TabIndex = 0;
+            this.textBoxTenDaiLy.TabStop = false;
+            this.textBoxTenDaiLy.Text = "Tên đại lý  ";
+            this.textBoxTenDaiLy.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // dataGridViewMatHang
+            // 
+            this.dataGridViewMatHang.AllowUserToAddRows = false;
+            this.dataGridViewMatHang.AllowUserToOrderColumns = true;
+            this.dataGridViewMatHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewMatHang.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewMatHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMatHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT,
+            this.MatHang,
+            this.DonViTinh,
+            this.SoLuong,
+            this.DonGia,
+            this.ThanhTien});
+            this.dataGridViewMatHang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewMatHang.Location = new System.Drawing.Point(0, 223);
+            this.dataGridViewMatHang.Name = "dataGridViewMatHang";
+            this.dataGridViewMatHang.RowHeadersWidth = 51;
+            this.dataGridViewMatHang.RowTemplate.Height = 29;
+            this.dataGridViewMatHang.Size = new System.Drawing.Size(1102, 393);
+            this.dataGridViewMatHang.TabIndex = 12;
+            this.dataGridViewMatHang.TabStop = false;
+            this.dataGridViewMatHang.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMatHang_CellEnter);
+            this.dataGridViewMatHang.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dataGridViewMatHang_CellValidating);
+            // 
+            // STT
+            // 
+            this.STT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.STT.Frozen = true;
+            this.STT.HeaderText = "STT";
+            this.STT.MinimumWidth = 6;
+            this.STT.Name = "STT";
+            this.STT.ReadOnly = true;
+            this.STT.Width = 60;
+            // 
+            // MatHang
+            // 
+            this.MatHang.HeaderText = "Mặt Hàng";
+            this.MatHang.MinimumWidth = 300;
+            this.MatHang.Name = "MatHang";
+            // 
+            // DonViTinh
+            // 
+            this.DonViTinh.FillWeight = 0.001529475F;
+            this.DonViTinh.HeaderText = "Đơn Vị Tính";
+            this.DonViTinh.MinimumWidth = 100;
+            this.DonViTinh.Name = "DonViTinh";
+            this.DonViTinh.ReadOnly = true;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.FillWeight = 0.1F;
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.MinimumWidth = 60;
+            this.SoLuong.Name = "SoLuong";
+            // 
+            // DonGia
+            // 
+            this.DonGia.FillWeight = 1F;
+            this.DonGia.HeaderText = "Đơn Giá";
+            this.DonGia.MinimumWidth = 100;
+            this.DonGia.Name = "DonGia";
+            this.DonGia.ReadOnly = true;
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.FillWeight = 1F;
+            this.ThanhTien.HeaderText = "Thành Tiền";
+            this.ThanhTien.MinimumWidth = 100;
+            this.ThanhTien.Name = "ThanhTien";
+            this.ThanhTien.ReadOnly = true;
+            // 
+            // FormPhieuXuatHang
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1102, 616);
+            this.Controls.Add(this.dataGridViewMatHang);
+            this.Controls.Add(this.groupBoxThongTin);
+            this.Controls.Add(this.textBoxTitle);
+            this.Name = "FormPhieuXuatHang";
+            this.Text = "FormPhieuXuatHang";
+            this.Load += new System.EventHandler(this.FormPhieuXuatHang_Load);
+            this.groupBoxThongTin.ResumeLayout(false);
+            this.groupBoxThongTin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMatHang)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.TextBox textBoxTitle;
+        private System.Windows.Forms.GroupBox groupBoxThongTin;
+        private System.Windows.Forms.TextBox textBoxNgayLapPhieu;
+        private System.Windows.Forms.TextBox textBoxTenDaiLy;
+        private System.Windows.Forms.DataGridView dataGridViewMatHang;
+        private System.Windows.Forms.DateTimePicker dateTimePickerNgayLapPhieuData;
+        private System.Windows.Forms.ComboBox comboBoxTenDaiLyData;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewComboBoxColumn MatHang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonViTinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
+        private System.Windows.Forms.Button button1;
+    }
+}
