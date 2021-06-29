@@ -29,42 +29,47 @@ namespace QuanLyCacDaiLi
                 cnn.Open();
                 return cnn;
             }
-            catch
+            catch (Exception e)
             {
                 MessageBox.Show("Can not open connection ! ");
+                throw e;
                 return null;
             }
         }
 
-        public static void ExecuteQuery(String sql)
+        // Return number of rows affected
+        public static int ExecuteQuery(String sql)
         {
-
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = sql;
             cmd.CommandType = CommandType.Text;
+            var numOfRowsAffected = -1;
 
             try
             {
                 var cnn = OpenConnection();
                 cmd.Connection = cnn;
-                cmd.ExecuteNonQuery();
+                numOfRowsAffected = cmd.ExecuteNonQuery();
                 cnn.Close();
             }
-            catch
+            catch (Exception e)
             {
                 MessageBox.Show("Can not execute query ! ");
+                throw e;
             }
+
+            return numOfRowsAffected;
         }
 
-        public static DataSet GetDataSet(String sql)
-        {
-            var cnn = OpenConnection();
-            var da = new SqlDataAdapter(sql, cnn);
-            var ds = new DataSet();
-            da.Fill(ds);
-            cnn.Close();
-            return ds;
-        }
+        //public static DataSet GetDataSet(String sql)
+        //{
+        //    var cnn = OpenConnection();
+        //    var da = new SqlDataAdapter(sql, cnn);
+        //    var ds = new DataSet();
+        //    da.Fill(ds);
+        //    cnn.Close();
+        //    return ds;
+        //}
 
         public static DataTable GetDataTable(String sql)
         {

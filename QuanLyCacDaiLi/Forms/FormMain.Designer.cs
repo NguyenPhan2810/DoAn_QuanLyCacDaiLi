@@ -86,6 +86,7 @@ namespace QuanLyCacDaiLi
             this.buttonLapPhieuXuatHang.TabIndex = 12;
             this.buttonLapPhieuXuatHang.Text = "Lập Phiếu Xuất Hàng";
             this.buttonLapPhieuXuatHang.UseVisualStyleBackColor = false;
+            this.buttonLapPhieuXuatHang.Click += new System.EventHandler(this.buttonLapPhieuXuatHang_Click);
             // 
             // buttonLapHoaPhieuThuTien
             // 

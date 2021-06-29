@@ -33,14 +33,16 @@ namespace QuanLyCacDaiLi
 
         private void FormQuanLyDaiLy_FormClosed(object sender, FormClosedEventArgs e)
         {
-            FormProvider.GetFormMain().Show();
+            FormProvider.GetForm(typeof(FormMain)).Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             var formThemDaiLy = new FormThemDaiLy();
             formThemDaiLy.ThemDaiLyEvent += ThemDaiLyEvent;
+            formThemDaiLy.FormClosed += (object sender, System.Windows.Forms.FormClosedEventArgs e) => this.Enabled = true;
             formThemDaiLy.Show();
+            this.Enabled = false;
         }
 
         private void LoadTable()

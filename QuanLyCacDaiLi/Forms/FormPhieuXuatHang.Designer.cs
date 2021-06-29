@@ -29,9 +29,12 @@ namespace QuanLyCacDaiLi
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.groupBoxThongTin = new System.Windows.Forms.GroupBox();
             this.buttonXoaMatHang = new System.Windows.Forms.Button();
+            this.buttonXuatPhieu = new System.Windows.Forms.Button();
             this.buttonThemMatHang = new System.Windows.Forms.Button();
             this.comboBoxTenDaiLyData = new System.Windows.Forms.ComboBox();
             this.dateTimePickerNgayLapPhieuData = new System.Windows.Forms.DateTimePicker();
@@ -59,7 +62,7 @@ namespace QuanLyCacDaiLi
             this.textBoxTitle.Location = new System.Drawing.Point(0, 0);
             this.textBoxTitle.Name = "textBoxTitle";
             this.textBoxTitle.ReadOnly = true;
-            this.textBoxTitle.Size = new System.Drawing.Size(1102, 91);
+            this.textBoxTitle.Size = new System.Drawing.Size(1227, 91);
             this.textBoxTitle.TabIndex = 10;
             this.textBoxTitle.TabStop = false;
             this.textBoxTitle.Text = "Phiếu Xuất Hàng";
@@ -68,6 +71,7 @@ namespace QuanLyCacDaiLi
             // groupBoxThongTin
             // 
             this.groupBoxThongTin.Controls.Add(this.buttonXoaMatHang);
+            this.groupBoxThongTin.Controls.Add(this.buttonXuatPhieu);
             this.groupBoxThongTin.Controls.Add(this.buttonThemMatHang);
             this.groupBoxThongTin.Controls.Add(this.comboBoxTenDaiLyData);
             this.groupBoxThongTin.Controls.Add(this.dateTimePickerNgayLapPhieuData);
@@ -76,7 +80,7 @@ namespace QuanLyCacDaiLi
             this.groupBoxThongTin.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBoxThongTin.Location = new System.Drawing.Point(0, 91);
             this.groupBoxThongTin.Name = "groupBoxThongTin";
-            this.groupBoxThongTin.Size = new System.Drawing.Size(1102, 132);
+            this.groupBoxThongTin.Size = new System.Drawing.Size(1227, 132);
             this.groupBoxThongTin.TabIndex = 11;
             this.groupBoxThongTin.TabStop = false;
             // 
@@ -92,6 +96,19 @@ namespace QuanLyCacDaiLi
             this.buttonXoaMatHang.Text = "Xoá mặt hàng";
             this.buttonXoaMatHang.UseVisualStyleBackColor = true;
             this.buttonXoaMatHang.Click += new System.EventHandler(this.buttonXoaMatHang_Click);
+            // 
+            // buttonXuatPhieu
+            // 
+            this.buttonXuatPhieu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonXuatPhieu.Font = new System.Drawing.Font("Nunito", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonXuatPhieu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.buttonXuatPhieu.Location = new System.Drawing.Point(1014, 88);
+            this.buttonXuatPhieu.Name = "buttonXuatPhieu";
+            this.buttonXuatPhieu.Size = new System.Drawing.Size(201, 38);
+            this.buttonXuatPhieu.TabIndex = 2;
+            this.buttonXuatPhieu.Text = "Xuất Phiếu";
+            this.buttonXuatPhieu.UseVisualStyleBackColor = true;
+            this.buttonXuatPhieu.Click += new System.EventHandler(this.buttonXuatPhieu_Click);
             // 
             // buttonThemMatHang
             // 
@@ -170,10 +187,11 @@ namespace QuanLyCacDaiLi
             this.dataGridViewMatHang.Name = "dataGridViewMatHang";
             this.dataGridViewMatHang.RowHeadersWidth = 51;
             this.dataGridViewMatHang.RowTemplate.Height = 29;
-            this.dataGridViewMatHang.Size = new System.Drawing.Size(1102, 393);
+            this.dataGridViewMatHang.Size = new System.Drawing.Size(1227, 496);
             this.dataGridViewMatHang.TabIndex = 12;
             this.dataGridViewMatHang.TabStop = false;
             this.dataGridViewMatHang.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMatHang_CellEnter);
+            this.dataGridViewMatHang.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMatHang_CellValidated);
             this.dataGridViewMatHang.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dataGridViewMatHang_CellValidating);
             // 
             // STT
@@ -188,6 +206,9 @@ namespace QuanLyCacDaiLi
             // 
             // MatHang
             // 
+            dataGridViewCellStyle1.NullValue = "Chọn mặt hàng";
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.MatHang.DefaultCellStyle = dataGridViewCellStyle1;
             this.MatHang.HeaderText = "Mặt Hàng";
             this.MatHang.MinimumWidth = 300;
             this.MatHang.Name = "MatHang";
@@ -196,15 +217,18 @@ namespace QuanLyCacDaiLi
             // 
             this.DonViTinh.FillWeight = 0.001529475F;
             this.DonViTinh.HeaderText = "Đơn Vị Tính";
-            this.DonViTinh.MinimumWidth = 100;
+            this.DonViTinh.MinimumWidth = 120;
             this.DonViTinh.Name = "DonViTinh";
             this.DonViTinh.ReadOnly = true;
             // 
             // SoLuong
             // 
+            dataGridViewCellStyle2.Format = "N0";
+            dataGridViewCellStyle2.NullValue = null;
+            this.SoLuong.DefaultCellStyle = dataGridViewCellStyle2;
             this.SoLuong.FillWeight = 0.1F;
             this.SoLuong.HeaderText = "Số lượng";
-            this.SoLuong.MinimumWidth = 60;
+            this.SoLuong.MinimumWidth = 100;
             this.SoLuong.Name = "SoLuong";
             // 
             // DonGia
@@ -219,7 +243,7 @@ namespace QuanLyCacDaiLi
             // 
             this.ThanhTien.FillWeight = 1F;
             this.ThanhTien.HeaderText = "Thành Tiền";
-            this.ThanhTien.MinimumWidth = 100;
+            this.ThanhTien.MinimumWidth = 150;
             this.ThanhTien.Name = "ThanhTien";
             this.ThanhTien.ReadOnly = true;
             // 
@@ -227,12 +251,13 @@ namespace QuanLyCacDaiLi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1102, 616);
+            this.ClientSize = new System.Drawing.Size(1227, 719);
             this.Controls.Add(this.dataGridViewMatHang);
             this.Controls.Add(this.groupBoxThongTin);
             this.Controls.Add(this.textBoxTitle);
+            this.MinimumSize = new System.Drawing.Size(1000, 600);
             this.Name = "FormPhieuXuatHang";
-            this.Text = "FormPhieuXuatHang";
+            this.Text = "Phiếu Xuất Hàng";
             this.Load += new System.EventHandler(this.FormPhieuXuatHang_Load);
             this.groupBoxThongTin.ResumeLayout(false);
             this.groupBoxThongTin.PerformLayout();
@@ -251,14 +276,15 @@ namespace QuanLyCacDaiLi
         private System.Windows.Forms.DataGridView dataGridViewMatHang;
         private System.Windows.Forms.DateTimePicker dateTimePickerNgayLapPhieuData;
         private System.Windows.Forms.ComboBox comboBoxTenDaiLyData;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonXoaMatHang;
+        private System.Windows.Forms.Button buttonThemMatHang;
+        private System.Windows.Forms.Button buttonXuatPhieu;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewComboBoxColumn MatHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonViTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button buttonXoaMatHang;
-        private System.Windows.Forms.Button buttonThemMatHang;
     }
 }

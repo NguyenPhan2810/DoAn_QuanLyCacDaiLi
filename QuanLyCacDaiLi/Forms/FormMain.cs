@@ -30,19 +30,31 @@ namespace QuanLyCacDaiLi
 
         private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
         {
-            FormProvider.GetFormLogIn().Close();
+            FormProvider.GetForm(typeof(FormLogIn)).Close();
         }
 
         private void buttonLogOut_Click(object sender, EventArgs e)
         {
-            FormProvider.GetFormLogIn().Show();
-            FormProvider.GetFormMain().Hide();
+            FormProvider.GetForm(typeof(FormLogIn)).Show();
+            FormProvider.GetForm(typeof(FormMain)).Hide();
+            FormProvider.GetForm(typeof(FormPhieuXuatHang)).Hide();
+            FormProvider.GetForm(typeof(FormQuanLyDaiLy)).Hide();
         }
 
         public void SetAccountName(string accountName)
         {
             textBoxTitle.Text = $"Xin chào {accountName}";
             this.Text = accountName;
+        }
+
+        private void buttonQuanLyDaiLy_Click(object sender, EventArgs e)
+        {
+            FormProvider.GetForm(typeof(FormQuanLyDaiLy)).Show();
+        }
+
+        private void buttonLapPhieuXuatHang_Click(object sender, EventArgs e)
+        {
+            FormProvider.GetForm(typeof(FormPhieuXuatHang)).Show();
         }
 
         public void SetLevelOfAccess(LevelOfAccess loa)
@@ -74,12 +86,6 @@ namespace QuanLyCacDaiLi
                 default:
                     break;
             }
-        }
-
-        private void buttonQuanLyDaiLy_Click(object sender, EventArgs e)
-        {
-            FormProvider.GetFormQuanLyDaiLy().Show();
-            Hide();
         }
     }
 }

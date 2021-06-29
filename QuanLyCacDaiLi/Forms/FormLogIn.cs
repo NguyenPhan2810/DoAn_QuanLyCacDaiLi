@@ -63,7 +63,7 @@ namespace QuanLyCacDaiLi
             if (dt.Rows.Count > 0)
             {
                 var row = dt.Rows[0].ItemArray;
-                var formMain = FormProvider.GetFormMain();
+                var formMain = FormProvider.GetForm(typeof(FormMain)) as FormMain;
                 formMain.SetLevelOfAccess((LevelOfAccess)row[row.Length - 1]);
                 formMain.SetAccountName((string)row[1]);
                 formMain.Show();
