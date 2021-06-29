@@ -56,8 +56,14 @@ namespace QuanLyCacDaiLi
             else if (classType == typeof(FormBaoCaoDoanhSo))
             {
                 newForm = new FormBaoCaoDoanhSo();
-                newForm.FormClosed += (object sender, System.Windows.Forms.FormClosedEventArgs e) 
+                newForm.FormClosed += (object sender, System.Windows.Forms.FormClosedEventArgs e)
                     => formStorage.Remove(typeof(FormBaoCaoDoanhSo));
+            }
+            else if (classType == typeof(FormBaoCaoCongNoDaiLy))
+            {
+                newForm = new FormBaoCaoCongNoDaiLy();
+                newForm.FormClosed += (object sender, System.Windows.Forms.FormClosedEventArgs e)
+                    => formStorage.Remove(typeof(FormBaoCaoCongNoDaiLy));
             }
             else
                 return null;

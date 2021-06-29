@@ -133,6 +133,7 @@ namespace QuanLyCacDaiLi
             this.buttonLapBaoCaoCongNoDaiLy.TabIndex = 11;
             this.buttonLapBaoCaoCongNoDaiLy.Text = "Lập Báo Cáo Công Nợ Đại Lý";
             this.buttonLapBaoCaoCongNoDaiLy.UseVisualStyleBackColor = false;
+            this.buttonLapBaoCaoCongNoDaiLy.Click += new System.EventHandler(this.buttonLapBaoCaoCongNoDaiLy_Click);
             // 
             // FormMain
             // 
