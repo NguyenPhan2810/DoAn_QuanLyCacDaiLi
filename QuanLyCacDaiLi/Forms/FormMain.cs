@@ -71,23 +71,23 @@ namespace QuanLyCacDaiLi
                 case LevelOfAccess.None:
                     break;
                 case LevelOfAccess.Admin:
-
                     buttonQuanLyDaiLy.Visible = true;
-                    buttonLapBaoCaoThang.Visible = true;
                     buttonLapPhieuXuatHang.Visible = true;
                     buttonLapHoaPhieuThuTien.Visible = true;
                     buttonThayDoiQuyDinh.Visible = true;
-
+                    buttonLapBaoCaoCongNoDaiLy.Visible = true;
+                    buttonLapBaoCaoDoanhSo.Visible = true;
                     break;
-                case LevelOfAccess.User:
 
+                case LevelOfAccess.User:
                     buttonQuanLyDaiLy.Visible = false;
-                    buttonLapBaoCaoThang.Visible = false;
                     buttonLapPhieuXuatHang.Visible = true;
                     buttonLapHoaPhieuThuTien.Visible = false;
                     buttonThayDoiQuyDinh.Visible = false;
-
+                    buttonLapBaoCaoCongNoDaiLy.Visible = false;
+                    buttonLapBaoCaoDoanhSo.Visible = false;
                     break;
+
                 default:
                     break;
             }
