@@ -57,6 +57,7 @@ namespace QuanLyCacDaiLi
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(190, 32);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TabStop = false;
             this.textBox1.Text = "Tên đại lý";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -71,6 +72,7 @@ namespace QuanLyCacDaiLi
             this.textBoxLoai.ReadOnly = true;
             this.textBoxLoai.Size = new System.Drawing.Size(190, 32);
             this.textBoxLoai.TabIndex = 1;
+            this.textBoxLoai.TabStop = false;
             this.textBoxLoai.Text = "Loại đại lý";
             this.textBoxLoai.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -85,16 +87,17 @@ namespace QuanLyCacDaiLi
             this.textBoxQuan.ReadOnly = true;
             this.textBoxQuan.Size = new System.Drawing.Size(190, 32);
             this.textBoxQuan.TabIndex = 2;
+            this.textBoxQuan.TabStop = false;
             this.textBoxQuan.Text = "Quận";
             this.textBoxQuan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBoxTenDaiLyData
             // 
             this.textBoxTenDaiLyData.Font = new System.Drawing.Font("Nunito SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBoxTenDaiLyData.Location = new System.Drawing.Point(195, 10);
+            this.textBoxTenDaiLyData.Location = new System.Drawing.Point(195, 6);
             this.textBoxTenDaiLyData.Name = "textBoxTenDaiLyData";
             this.textBoxTenDaiLyData.Size = new System.Drawing.Size(405, 39);
-            this.textBoxTenDaiLyData.TabIndex = 3;
+            this.textBoxTenDaiLyData.TabIndex = 0;
             this.textBoxTenDaiLyData.Leave += new System.EventHandler(this.textBoxTenDaiLyData_Leave);
             // 
             // comboBoxLoaiDaiLyData
@@ -143,14 +146,14 @@ namespace QuanLyCacDaiLi
             this.comboBoxQuanData.Location = new System.Drawing.Point(195, 100);
             this.comboBoxQuanData.Name = "comboBoxQuanData";
             this.comboBoxQuanData.Size = new System.Drawing.Size(405, 40);
-            this.comboBoxQuanData.TabIndex = 5;
+            this.comboBoxQuanData.TabIndex = 2;
             // 
             // buttonThemDaiLy
             // 
             this.buttonThemDaiLy.Location = new System.Drawing.Point(239, 335);
             this.buttonThemDaiLy.Name = "buttonThemDaiLy";
             this.buttonThemDaiLy.Size = new System.Drawing.Size(127, 46);
-            this.buttonThemDaiLy.TabIndex = 6;
+            this.buttonThemDaiLy.TabIndex = 7;
             this.buttonThemDaiLy.Text = "Thêm";
             this.buttonThemDaiLy.UseVisualStyleBackColor = true;
             this.buttonThemDaiLy.Click += new System.EventHandler(this.buttonThemDaiLy_Click);
@@ -158,10 +161,10 @@ namespace QuanLyCacDaiLi
             // textBoxSoDienThoaiData
             // 
             this.textBoxSoDienThoaiData.Font = new System.Drawing.Font("Nunito SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBoxSoDienThoaiData.Location = new System.Drawing.Point(195, 55);
+            this.textBoxSoDienThoaiData.Location = new System.Drawing.Point(195, 51);
             this.textBoxSoDienThoaiData.Name = "textBoxSoDienThoaiData";
             this.textBoxSoDienThoaiData.Size = new System.Drawing.Size(405, 39);
-            this.textBoxSoDienThoaiData.TabIndex = 8;
+            this.textBoxSoDienThoaiData.TabIndex = 1;
             // 
             // textBoxSoDienThoai
             // 
@@ -174,6 +177,7 @@ namespace QuanLyCacDaiLi
             this.textBoxSoDienThoai.ReadOnly = true;
             this.textBoxSoDienThoai.Size = new System.Drawing.Size(190, 32);
             this.textBoxSoDienThoai.TabIndex = 7;
+            this.textBoxSoDienThoai.TabStop = false;
             this.textBoxSoDienThoai.Text = "Số điện thoại";
             this.textBoxSoDienThoai.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -183,7 +187,7 @@ namespace QuanLyCacDaiLi
             this.textBoxEmailData.Location = new System.Drawing.Point(195, 146);
             this.textBoxEmailData.Name = "textBoxEmailData";
             this.textBoxEmailData.Size = new System.Drawing.Size(405, 39);
-            this.textBoxEmailData.TabIndex = 10;
+            this.textBoxEmailData.TabIndex = 3;
             // 
             // textBoxEmail
             // 
@@ -196,6 +200,7 @@ namespace QuanLyCacDaiLi
             this.textBoxEmail.ReadOnly = true;
             this.textBoxEmail.Size = new System.Drawing.Size(177, 32);
             this.textBoxEmail.TabIndex = 9;
+            this.textBoxEmail.TabStop = false;
             this.textBoxEmail.Text = "Email";
             this.textBoxEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -205,7 +210,7 @@ namespace QuanLyCacDaiLi
             this.textBoxDiaChiData.Location = new System.Drawing.Point(195, 237);
             this.textBoxDiaChiData.Name = "textBoxDiaChiData";
             this.textBoxDiaChiData.Size = new System.Drawing.Size(405, 39);
-            this.textBoxDiaChiData.TabIndex = 12;
+            this.textBoxDiaChiData.TabIndex = 5;
             // 
             // textBoxDiaChi
             // 
@@ -218,6 +223,7 @@ namespace QuanLyCacDaiLi
             this.textBoxDiaChi.ReadOnly = true;
             this.textBoxDiaChi.Size = new System.Drawing.Size(177, 32);
             this.textBoxDiaChi.TabIndex = 11;
+            this.textBoxDiaChi.TabStop = false;
             this.textBoxDiaChi.Text = "Địa chỉ";
             this.textBoxDiaChi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -227,7 +233,7 @@ namespace QuanLyCacDaiLi
             this.dateTimePickerNgayTiepNhanData.Location = new System.Drawing.Point(195, 283);
             this.dateTimePickerNgayTiepNhanData.Name = "dateTimePickerNgayTiepNhanData";
             this.dateTimePickerNgayTiepNhanData.Size = new System.Drawing.Size(405, 27);
-            this.dateTimePickerNgayTiepNhanData.TabIndex = 13;
+            this.dateTimePickerNgayTiepNhanData.TabIndex = 6;
             // 
             // textBoxNgayTiepNhan
             // 
@@ -240,6 +246,7 @@ namespace QuanLyCacDaiLi
             this.textBoxNgayTiepNhan.ReadOnly = true;
             this.textBoxNgayTiepNhan.Size = new System.Drawing.Size(177, 32);
             this.textBoxNgayTiepNhan.TabIndex = 14;
+            this.textBoxNgayTiepNhan.TabStop = false;
             this.textBoxNgayTiepNhan.Text = "Ngày tiếp nhận";
             this.textBoxNgayTiepNhan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
