@@ -97,7 +97,15 @@ namespace QuanLyCacDaiLi
                             0)";
 
 
-            DatabaseHelper.ExecuteQuery(query);
+            try
+            {
+                DatabaseHelper.ExecuteQuery(query);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                throw e;
+            }
 
             LoadTable();
         }

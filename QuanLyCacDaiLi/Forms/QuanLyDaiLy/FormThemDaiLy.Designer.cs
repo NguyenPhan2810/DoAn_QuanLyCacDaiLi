@@ -118,31 +118,6 @@ namespace QuanLyCacDaiLi
             this.comboBoxQuanData.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxQuanData.Font = new System.Drawing.Font("Nunito SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxQuanData.FormattingEnabled = true;
-            this.comboBoxQuanData.Items.AddRange(new object[] {
-            "Quận 1",
-            "Quận 2",
-            "Quận 3",
-            "Quận 4",
-            "Quận 5",
-            "Quận 6",
-            "Quận 7",
-            "Quận 8",
-            "Quận 9",
-            "Quận 10",
-            "Quận 11",
-            "Quận 12",
-            "Quận Bình Thạnh",
-            "Quận Thủ Đức",
-            "Quận Gò Vấp",
-            "Quận Phú Nhuận",
-            "Quận Tân Bình",
-            "Quận Tân Phú",
-            "Quận Bình Tân",
-            "Huyện Nhà Bè",
-            "Huyện Hóc Môn",
-            "Huyện Bình Chán",
-            "Huyện Củ Chi",
-            "Huyện Cần Giờ"});
             this.comboBoxQuanData.Location = new System.Drawing.Point(195, 100);
             this.comboBoxQuanData.Name = "comboBoxQuanData";
             this.comboBoxQuanData.Size = new System.Drawing.Size(405, 40);

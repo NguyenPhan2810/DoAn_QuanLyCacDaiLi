@@ -21,8 +21,25 @@ namespace QuanLyCacDaiLi
 
         private void FormThemDaiLy_Load(object sender, EventArgs e)
         {
-            comboBoxLoaiDaiLyData.SelectedIndex = 0;
+            // Load danh sách quận dựa trên số lượng đại lý tối đa mỗi quận
+            string query = @$"select dsq.TENQ
+                              from DANHSACHQUAN as dsq left join DAILY as dl on dsq.TENQ = dl.QUAN
+                              group by dsq.TENQ
+                              having COUNT(dl.TENDAILY) <= {GlobalConstants.MaxSoLuongDaiLyMoiQuan}";
+
+            var dt = DatabaseHelper.GetDataTable(query);
+
+            string[] dsTenQuan = new string[dt.Rows.Count];
+            for(int i = 0; i < dsTenQuan.Length; ++i)
+            {
+                dsTenQuan[i] = dt.Rows[i][0].ToString();
+            }
+
+            comboBoxQuanData.DataSource = dsTenQuan;
+
+            // Init index
             comboBoxQuanData.SelectedIndex = 0;
+            comboBoxLoaiDaiLyData.SelectedIndex = 0;
         }
 
         private void textBoxTenDaiLyData_Leave(object sender, EventArgs e)
