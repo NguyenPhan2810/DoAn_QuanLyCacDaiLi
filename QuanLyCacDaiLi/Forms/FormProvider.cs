@@ -71,6 +71,12 @@ namespace QuanLyCacDaiLi
                 newForm.FormClosed += (object sender, System.Windows.Forms.FormClosedEventArgs e)
                     => formStorage.Remove(typeof(FormThayDoiQuyDinh));
             }
+            else if (classType == typeof(FormThemMatHang))
+            {
+                newForm = new FormThemMatHang();
+                newForm.FormClosed += (object sender, System.Windows.Forms.FormClosedEventArgs e)
+                    => formStorage.Remove(typeof(FormThemMatHang));
+            }
             else
                 return null;
 

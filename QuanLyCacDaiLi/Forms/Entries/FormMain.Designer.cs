@@ -151,6 +151,7 @@ namespace QuanLyCacDaiLi
             this.Controls.Add(this.buttonQuanLyDaiLy);
             this.Controls.Add(this.textBoxTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormMain";
             this.Text = "Chọn chức năng";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMain_FormClosed);

@@ -20,11 +20,7 @@ namespace QuanLyCacDaiLi
             numericUpDownSoDaiLyMaxData.Value = GlobalConstants.MaxSoLuongDaiLyMoiQuan;
 
             LoadLoaiDaiLy();
-        }
-
-        private void numericUpDownSoDaiLyMaxData_Enter(object sender, EventArgs e)
-        {
-
+            LoadMathang();
         }
 
         private void numericUpDownSoDaiLyMaxData_ValueChanged(object sender, EventArgs e)
@@ -107,6 +103,28 @@ namespace QuanLyCacDaiLi
             }
         }
 
+
+        private void buttonThemMatHang_Click(object sender, EventArgs e)
+        {
+            var newForm = FormProvider.GetForm(typeof(FormThemMatHang)) as FormThemMatHang;
+            newForm.ThemMatHangEvent += (string tenMatHang, decimal donGia, string donViTinh) =>
+            {
+                AddRowDataGridViewMatHang(tenMatHang, donGia.ToString(), donViTinh);
+                DatabaseHelper.ExecuteQuery($"INSERT INTO MATHANG VALUES(N'{tenMatHang}', {donGia}, N'{donViTinh}')");
+
+                FormProvider.GetForm(typeof(FormThayDoiQuyDinh)).Enabled = true;
+            };
+
+            newForm.Show();
+
+            FormProvider.GetForm(typeof(FormThayDoiQuyDinh)).Enabled = false;
+        }
+        private void buttonXoaMatHang_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
         private void LoadLoaiDaiLy()
         {
             string query = "select LOAI, TIENNOMAX from LOAIDAILY";
@@ -118,12 +136,33 @@ namespace QuanLyCacDaiLi
             }
         }
 
+        private void LoadMathang()
+        {
+            string query = "select TENMATHANG, DONGIA, DONVITINH from MATHANG";
+            var dt = DatabaseHelper.GetDataTable(query);
+
+            for (int i = 0; i < dt.Rows.Count; ++i)
+            {
+                AddRowDataGridViewMatHang(dt.Rows[i]["TENMATHANG"].ToString(),
+                    dt.Rows[i]["DONGIA"].ToString(), dt.Rows[i]["DONVITINH"].ToString());
+            }
+        }
+
         private void AddRowDataGridViewLoaiDaiLy(string loai, string tienNoMax)
         {
             var newRow = dataGridViewLoaiDaiLy.Rows[dataGridViewLoaiDaiLy.Rows.Add()];
 
             newRow.Cells[LoaiDaiLy.Name].Value = loai;
             newRow.Cells[TienNoMax.Name].Value = tienNoMax;
+        }
+
+        private void AddRowDataGridViewMatHang(string tenMathang, string donGia, string donViTinh)
+        {
+            var newRow = dataGridViewMatHang.Rows[dataGridViewMatHang.Rows.Add()];
+
+            newRow.Cells[TenMatHang.Name].Value = tenMathang;
+            newRow.Cells[DonGia.Name].Value = donGia;
+            newRow.Cells[DonViTinh.Name].Value = donViTinh;
         }
 
         private void dataGridViewLoaiDaiLy_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
@@ -155,5 +194,6 @@ namespace QuanLyCacDaiLi
                 DatabaseHelper.ExecuteQuery($"update LOAIDAILY set TIENNOMAX = {cellTienNo.Value.ToString()} where LOAI = {cellLoaiDaiLy.Value.ToString()}");
             }
         }
+
     }
 }
