@@ -37,6 +37,7 @@ namespace QuanLyCacDaiLi
             this.buttonThayDoiQuyDinh = new System.Windows.Forms.Button();
             this.buttonLogOut = new System.Windows.Forms.Button();
             this.buttonLapBaoCaoCongNoDaiLy = new System.Windows.Forms.Button();
+            this.buttonXemPhieuXuatHang = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxTitle
@@ -70,7 +71,7 @@ namespace QuanLyCacDaiLi
             // 
             this.buttonLapBaoCaoDoanhSo.BackColor = System.Drawing.Color.White;
             this.buttonLapBaoCaoDoanhSo.Font = new System.Drawing.Font("Nunito SemiBold", 17F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.buttonLapBaoCaoDoanhSo.Location = new System.Drawing.Point(12, 341);
+            this.buttonLapBaoCaoDoanhSo.Location = new System.Drawing.Point(12, 430);
             this.buttonLapBaoCaoDoanhSo.Name = "buttonLapBaoCaoDoanhSo";
             this.buttonLapBaoCaoDoanhSo.Size = new System.Drawing.Size(412, 83);
             this.buttonLapBaoCaoDoanhSo.TabIndex = 11;
@@ -94,7 +95,7 @@ namespace QuanLyCacDaiLi
             // 
             this.buttonLapHoaPhieuThuTien.BackColor = System.Drawing.Color.White;
             this.buttonLapHoaPhieuThuTien.Font = new System.Drawing.Font("Nunito SemiBold", 17F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.buttonLapHoaPhieuThuTien.Location = new System.Drawing.Point(12, 252);
+            this.buttonLapHoaPhieuThuTien.Location = new System.Drawing.Point(12, 341);
             this.buttonLapHoaPhieuThuTien.Name = "buttonLapHoaPhieuThuTien";
             this.buttonLapHoaPhieuThuTien.Size = new System.Drawing.Size(412, 83);
             this.buttonLapHoaPhieuThuTien.TabIndex = 13;
@@ -116,7 +117,7 @@ namespace QuanLyCacDaiLi
             // 
             // buttonLogOut
             // 
-            this.buttonLogOut.Location = new System.Drawing.Point(366, 480);
+            this.buttonLogOut.Location = new System.Drawing.Point(361, 587);
             this.buttonLogOut.Name = "buttonLogOut";
             this.buttonLogOut.Size = new System.Drawing.Size(176, 52);
             this.buttonLogOut.TabIndex = 15;
@@ -136,15 +137,28 @@ namespace QuanLyCacDaiLi
             this.buttonLapBaoCaoCongNoDaiLy.UseVisualStyleBackColor = false;
             this.buttonLapBaoCaoCongNoDaiLy.Click += new System.EventHandler(this.buttonLapBaoCaoCongNoDaiLy_Click);
             // 
+            // buttonXemPhieuXuatHang
+            // 
+            this.buttonXemPhieuXuatHang.BackColor = System.Drawing.Color.White;
+            this.buttonXemPhieuXuatHang.Font = new System.Drawing.Font("Nunito SemiBold", 17F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.buttonXemPhieuXuatHang.Location = new System.Drawing.Point(12, 252);
+            this.buttonXemPhieuXuatHang.Name = "buttonXemPhieuXuatHang";
+            this.buttonXemPhieuXuatHang.Size = new System.Drawing.Size(412, 83);
+            this.buttonXemPhieuXuatHang.TabIndex = 12;
+            this.buttonXemPhieuXuatHang.Text = "Xem Phiếu Xuất Hàng";
+            this.buttonXemPhieuXuatHang.UseVisualStyleBackColor = false;
+            this.buttonXemPhieuXuatHang.Click += new System.EventHandler(this.buttonXemPhieuXuatHang_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(200)))));
-            this.ClientSize = new System.Drawing.Size(901, 571);
+            this.ClientSize = new System.Drawing.Size(903, 720);
             this.Controls.Add(this.buttonLogOut);
             this.Controls.Add(this.buttonThayDoiQuyDinh);
             this.Controls.Add(this.buttonLapHoaPhieuThuTien);
+            this.Controls.Add(this.buttonXemPhieuXuatHang);
             this.Controls.Add(this.buttonLapPhieuXuatHang);
             this.Controls.Add(this.buttonLapBaoCaoCongNoDaiLy);
             this.Controls.Add(this.buttonLapBaoCaoDoanhSo);
@@ -155,6 +169,7 @@ namespace QuanLyCacDaiLi
             this.Name = "FormMain";
             this.Text = "Chọn chức năng";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMain_FormClosed);
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,6 +185,7 @@ namespace QuanLyCacDaiLi
         private System.Windows.Forms.Button buttonThayDoiQuyDinh;
         private System.Windows.Forms.Button buttonLogOut;
         private System.Windows.Forms.Button buttonLapBaoCaoCongNoDaiLy;
+        private System.Windows.Forms.Button buttonXemPhieuXuatHang;
     }
 }
 

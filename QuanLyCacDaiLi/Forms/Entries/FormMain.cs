@@ -77,6 +77,11 @@ namespace QuanLyCacDaiLi
             FormProvider.GetForm(typeof(FormThayDoiQuyDinh)).Show();
         }
 
+        private void buttonXemPhieuXuatHang_Click(object sender, EventArgs e)
+        {
+            FormProvider.GetForm(typeof(FormXemPhieuXuatHang)).Show();
+        }
+
         public void SetLevelOfAccess(LevelOfAccess loa)
         {
             levelOfAccess = loa;
@@ -92,6 +97,7 @@ namespace QuanLyCacDaiLi
                     buttonThayDoiQuyDinh.Visible = true;
                     buttonLapBaoCaoCongNoDaiLy.Visible = true;
                     buttonLapBaoCaoDoanhSo.Visible = true;
+                    buttonXemPhieuXuatHang.Visible = true;
                     break;
 
                 case LevelOfAccess.User:
@@ -101,11 +107,17 @@ namespace QuanLyCacDaiLi
                     buttonThayDoiQuyDinh.Visible = false;
                     buttonLapBaoCaoCongNoDaiLy.Visible = false;
                     buttonLapBaoCaoDoanhSo.Visible = false;
+                    buttonXemPhieuXuatHang.Visible = true;
                     break;
 
                 default:
                     break;
             }
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
