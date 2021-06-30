@@ -51,7 +51,7 @@ namespace QuanLyCacDaiLi
 
         private void buttonThemLoaiDaiLy_Click(object sender, EventArgs e)
         {
-            int loai = dataGridViewLoaiDaiLy.Rows.Count + 1;
+            int loai = 1 + int.Parse(dataGridViewLoaiDaiLy[LoaiDaiLy.Name, dataGridViewLoaiDaiLy.Rows.Count - 1].Value.ToString());
             int tienNo = 0;
             AddRowDataGridViewLoaiDaiLy(loai.ToString(), tienNo.ToString());
 
@@ -82,6 +82,8 @@ namespace QuanLyCacDaiLi
                         DatabaseHelper.ExecuteQuery($"delete from LOAIDAILY where LOAI = {loaiDaiLy}");
 
                         dataGridViewLoaiDaiLy.Rows.Remove(dataGridViewLoaiDaiLy.SelectedRows[i]);
+
+                        i--;
                     }
                     else
                     {
