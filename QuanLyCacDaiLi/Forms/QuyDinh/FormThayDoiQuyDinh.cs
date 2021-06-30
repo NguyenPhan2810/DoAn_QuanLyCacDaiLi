@@ -121,7 +121,26 @@ namespace QuanLyCacDaiLi
         }
         private void buttonXoaMatHang_Click(object sender, EventArgs e)
         {
+            if (dataGridViewMatHang.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("Vui lòng chọn ít nhất 1 dòng để xoá.", "Thông báo");
+                return;
+            }
 
+            string message = $"Bạn có chắc muốn xoá {dataGridViewMatHang.SelectedRows.Count} mặt hàng?";
+            DialogResult dialogResult = MessageBox.Show(message, "", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                // XOÁ!
+                for (int i = 0; i < dataGridViewMatHang.SelectedRows.Count;)
+                {
+                    var tenMatHang = dataGridViewMatHang.SelectedRows[i].Cells[TenMatHang.Name].Value.ToString();
+
+                    DatabaseHelper.ExecuteQuery($"delete from MATHANG where TENMATHANG = N'{tenMatHang}'");
+
+                    dataGridViewMatHang.Rows.Remove(dataGridViewMatHang.SelectedRows[i]);
+                }
+            }
         }
 
 

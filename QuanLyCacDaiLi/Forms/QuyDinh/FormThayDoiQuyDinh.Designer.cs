@@ -29,7 +29,7 @@ namespace QuanLyCacDaiLi
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.textBoxSoDaiLyMax = new System.Windows.Forms.TextBox();
             this.numericUpDownSoDaiLyMaxData = new System.Windows.Forms.NumericUpDown();
@@ -110,7 +110,6 @@ namespace QuanLyCacDaiLi
             this.flowLayoutPanel1.Controls.Add(this.groupBox2);
             this.flowLayoutPanel1.Controls.Add(this.groupBox3);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 91);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(954, 617);
@@ -147,7 +146,7 @@ namespace QuanLyCacDaiLi
             this.groupBox2.Controls.Add(this.splitContainer1);
             this.groupBox2.Location = new System.Drawing.Point(3, 89);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(733, 191);
+            this.groupBox2.Size = new System.Drawing.Size(920, 191);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Loại Đại Lý";
@@ -167,8 +166,8 @@ namespace QuanLyCacDaiLi
             // 
             this.splitContainer1.Panel2.Controls.Add(this.buttonXoaLoaiDaiLy);
             this.splitContainer1.Panel2.Controls.Add(this.buttonThemLoaiDaiLy);
-            this.splitContainer1.Size = new System.Drawing.Size(727, 165);
-            this.splitContainer1.SplitterDistance = 500;
+            this.splitContainer1.Size = new System.Drawing.Size(914, 165);
+            this.splitContainer1.SplitterDistance = 628;
             this.splitContainer1.TabIndex = 2;
             // 
             // dataGridViewLoaiDaiLy
@@ -186,16 +185,16 @@ namespace QuanLyCacDaiLi
             this.dataGridViewLoaiDaiLy.Name = "dataGridViewLoaiDaiLy";
             this.dataGridViewLoaiDaiLy.RowHeadersWidth = 51;
             this.dataGridViewLoaiDaiLy.RowTemplate.Height = 29;
-            this.dataGridViewLoaiDaiLy.Size = new System.Drawing.Size(500, 165);
+            this.dataGridViewLoaiDaiLy.Size = new System.Drawing.Size(628, 165);
             this.dataGridViewLoaiDaiLy.TabIndex = 0;
             this.dataGridViewLoaiDaiLy.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLoaiDaiLy_CellValidated);
             this.dataGridViewLoaiDaiLy.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dataGridViewLoaiDaiLy_CellValidating);
             // 
             // LoaiDaiLy
             // 
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.LoaiDaiLy.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.LoaiDaiLy.DefaultCellStyle = dataGridViewCellStyle1;
             this.LoaiDaiLy.HeaderText = "Loại Đại Lý";
             this.LoaiDaiLy.MinimumWidth = 6;
             this.LoaiDaiLy.Name = "LoaiDaiLy";
@@ -234,7 +233,7 @@ namespace QuanLyCacDaiLi
             this.groupBox3.Controls.Add(this.splitContainer2);
             this.groupBox3.Location = new System.Drawing.Point(3, 286);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(733, 178);
+            this.groupBox3.Size = new System.Drawing.Size(923, 308);
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Mặt Hàng";
@@ -253,8 +252,8 @@ namespace QuanLyCacDaiLi
             // 
             this.splitContainer2.Panel2.Controls.Add(this.buttonXoaMatHang);
             this.splitContainer2.Panel2.Controls.Add(this.buttonThemMatHang);
-            this.splitContainer2.Size = new System.Drawing.Size(727, 152);
-            this.splitContainer2.SplitterDistance = 502;
+            this.splitContainer2.Size = new System.Drawing.Size(917, 282);
+            this.splitContainer2.SplitterDistance = 633;
             this.splitContainer2.TabIndex = 0;
             // 
             // dataGridViewMatHang
@@ -272,7 +271,7 @@ namespace QuanLyCacDaiLi
             this.dataGridViewMatHang.Name = "dataGridViewMatHang";
             this.dataGridViewMatHang.RowHeadersWidth = 51;
             this.dataGridViewMatHang.RowTemplate.Height = 29;
-            this.dataGridViewMatHang.Size = new System.Drawing.Size(502, 152);
+            this.dataGridViewMatHang.Size = new System.Drawing.Size(633, 282);
             this.dataGridViewMatHang.TabIndex = 0;
             // 
             // TenMatHang
