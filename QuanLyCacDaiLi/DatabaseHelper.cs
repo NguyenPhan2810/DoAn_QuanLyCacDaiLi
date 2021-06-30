@@ -15,9 +15,16 @@ namespace QuanLyCacDaiLi
         private static string databaseName = "QLDL";
         private static SqlConnection cnn = null;
 
-        public static void Init()
+        // Return true if succeeded, false otherwise
+        public static bool Init()
         {
+            var loadingForm = new LoadingForm(ConfigurationManager.ConnectionStrings[databaseName].ConnectionString);
+            loadingForm.Show();
+
             OpenConnection().Close();
+
+            loadingForm.Close();
+            return cnn != null;
         }
 
         public static SqlConnection OpenConnection()
@@ -36,7 +43,9 @@ namespace QuanLyCacDaiLi
             }
             catch (Exception e)
             {
-                MessageBox.Show("Can not open connection ! ");
+                cnn = null;
+                MessageBox.Show(@"Không thể kết nối tới cơ sở dữ liệu. Hãy kiểm tra 'connection string', kiểm tra tên server trong connection string và chắc rằng có cơ sở dữ liệu tên 'QLDL' đang chạy trên máy ! "
+                            + "\n\n\nChi tiết: " + e.Message, "lỗi");
                 throw e;
                 return null;
             }

@@ -17,7 +17,7 @@ namespace QuanLyCacDaiLi
 
         private void FormLogIn_Load(object sender, EventArgs e)
         {
-            DatabaseHelper.Init();
+
         }
 
         private void checkBoxShowPassword_CheckedChanged(object sender, EventArgs e)
