@@ -29,7 +29,7 @@ namespace QuanLyCacDaiLi
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.textBoxSoDaiLyMax = new System.Windows.Forms.TextBox();
             this.numericUpDownSoDaiLyMaxData = new System.Windows.Forms.NumericUpDown();
@@ -46,11 +46,11 @@ namespace QuanLyCacDaiLi
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.dataGridViewMatHang = new System.Windows.Forms.DataGridView();
+            this.buttonXoaMatHang = new System.Windows.Forms.Button();
+            this.buttonThemMatHang = new System.Windows.Forms.Button();
             this.TenMatHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonViTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonXoaMatHang = new System.Windows.Forms.Button();
-            this.buttonThemMatHang = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSoDaiLyMaxData)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -192,9 +192,9 @@ namespace QuanLyCacDaiLi
             // 
             // LoaiDaiLy
             // 
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.LoaiDaiLy.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.LoaiDaiLy.DefaultCellStyle = dataGridViewCellStyle3;
             this.LoaiDaiLy.HeaderText = "Loại Đại Lý";
             this.LoaiDaiLy.MinimumWidth = 6;
             this.LoaiDaiLy.Name = "LoaiDaiLy";
@@ -273,25 +273,8 @@ namespace QuanLyCacDaiLi
             this.dataGridViewMatHang.RowTemplate.Height = 29;
             this.dataGridViewMatHang.Size = new System.Drawing.Size(633, 282);
             this.dataGridViewMatHang.TabIndex = 0;
-            // 
-            // TenMatHang
-            // 
-            this.TenMatHang.HeaderText = "Tên Mặt Hàng";
-            this.TenMatHang.MinimumWidth = 6;
-            this.TenMatHang.Name = "TenMatHang";
-            this.TenMatHang.ReadOnly = true;
-            // 
-            // DonGia
-            // 
-            this.DonGia.HeaderText = "Đơn Giá";
-            this.DonGia.MinimumWidth = 6;
-            this.DonGia.Name = "DonGia";
-            // 
-            // DonViTinh
-            // 
-            this.DonViTinh.HeaderText = "Đơn Vị Tính";
-            this.DonViTinh.MinimumWidth = 6;
-            this.DonViTinh.Name = "DonViTinh";
+            this.dataGridViewMatHang.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMatHang_CellValidated);
+            this.dataGridViewMatHang.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dataGridViewMatHang_CellValidating);
             // 
             // buttonXoaMatHang
             // 
@@ -314,6 +297,26 @@ namespace QuanLyCacDaiLi
             this.buttonThemMatHang.Text = "Thêm Mặt Hàng";
             this.buttonThemMatHang.UseVisualStyleBackColor = true;
             this.buttonThemMatHang.Click += new System.EventHandler(this.buttonThemMatHang_Click);
+            // 
+            // TenMatHang
+            // 
+            this.TenMatHang.FillWeight = 200F;
+            this.TenMatHang.HeaderText = "Tên Mặt Hàng";
+            this.TenMatHang.MinimumWidth = 6;
+            this.TenMatHang.Name = "TenMatHang";
+            this.TenMatHang.ReadOnly = true;
+            // 
+            // DonGia
+            // 
+            this.DonGia.HeaderText = "Đơn Giá";
+            this.DonGia.MinimumWidth = 6;
+            this.DonGia.Name = "DonGia";
+            // 
+            // DonViTinh
+            // 
+            this.DonViTinh.HeaderText = "Đơn Vị Tính";
+            this.DonViTinh.MinimumWidth = 6;
+            this.DonViTinh.Name = "DonViTinh";
             // 
             // FormThayDoiQuyDinh
             // 
@@ -365,10 +368,10 @@ namespace QuanLyCacDaiLi
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.DataGridView dataGridViewMatHang;
+        private System.Windows.Forms.Button buttonXoaMatHang;
+        private System.Windows.Forms.Button buttonThemMatHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenMatHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonViTinh;
-        private System.Windows.Forms.Button buttonXoaMatHang;
-        private System.Windows.Forms.Button buttonThemMatHang;
     }
 }

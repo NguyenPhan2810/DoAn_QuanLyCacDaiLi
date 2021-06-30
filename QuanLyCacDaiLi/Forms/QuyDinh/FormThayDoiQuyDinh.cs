@@ -103,7 +103,6 @@ namespace QuanLyCacDaiLi
             }
         }
 
-
         private void buttonThemMatHang_Click(object sender, EventArgs e)
         {
             var newForm = FormProvider.GetForm(typeof(FormThemMatHang)) as FormThemMatHang;
@@ -119,6 +118,7 @@ namespace QuanLyCacDaiLi
 
             FormProvider.GetForm(typeof(FormThayDoiQuyDinh)).Enabled = false;
         }
+        
         private void buttonXoaMatHang_Click(object sender, EventArgs e)
         {
             if (dataGridViewMatHang.SelectedRows.Count <= 0)
@@ -142,7 +142,6 @@ namespace QuanLyCacDaiLi
                 }
             }
         }
-
 
         private void LoadLoaiDaiLy()
         {
@@ -214,5 +213,41 @@ namespace QuanLyCacDaiLi
             }
         }
 
+        private void dataGridViewMatHang_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            if (dataGridViewMatHang.Columns[e.ColumnIndex].Name == DonGia.Name)
+            {
+                // Kiểm tra đơn giá
+                DataGridViewTextBoxCell cellDonGia = (DataGridViewTextBoxCell)dataGridViewMatHang[e.ColumnIndex, e.RowIndex];
+
+                uint donGia = 0;
+                if (cellDonGia.EditedFormattedValue.ToString() != ""
+                    && (!uint.TryParse(cellDonGia.EditedFormattedValue.ToString(), out donGia)))
+                {
+                    e.Cancel = true;
+                    MessageBox.Show("Vui lòng nhập đơn giá hợp lệ", "Lỗi");
+                }
+            }
+        }
+
+        private void dataGridViewMatHang_CellValidated(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridViewMatHang.Columns[e.ColumnIndex].Name == DonViTinh.Name)
+            {
+                // Cập nhật đơn vị tính
+                var cellDonViTinh = dataGridViewMatHang[e.ColumnIndex, e.RowIndex];
+                var cellTenMatHang = dataGridViewMatHang[TenMatHang.Name, e.RowIndex];
+
+                DatabaseHelper.ExecuteQuery($"update MATHANG set DONVITINH = N'{cellDonViTinh.Value.ToString()}' where TENMATHANG = N'{cellTenMatHang.Value.ToString()}'");
+            }
+            else if (dataGridViewMatHang.Columns[e.ColumnIndex].Name == DonGia.Name)
+            {
+                // Cập nhật đơn giá
+                var cellDonGia = dataGridViewMatHang[e.ColumnIndex, e.RowIndex];
+                var cellTenMatHang = dataGridViewMatHang[TenMatHang.Name, e.RowIndex];
+
+                DatabaseHelper.ExecuteQuery($"update MATHANG set DONGIA = {cellDonGia.Value.ToString()} where TENMATHANG = N'{cellTenMatHang.Value.ToString()}'");
+            }
+        }
     }
 }
