@@ -92,6 +92,7 @@ namespace QuanLyCacDaiLi
             var ds = new DataSet();
             da.Fill(ds);
             cnn.Close();
+
             return ds.Tables[0];
         }
     }

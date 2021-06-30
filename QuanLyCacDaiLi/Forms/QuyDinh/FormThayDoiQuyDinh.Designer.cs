@@ -29,10 +29,29 @@ namespace QuanLyCacDaiLi
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.textBoxSoDaiLyMax = new System.Windows.Forms.TextBox();
+            this.numericUpDownSoDaiLyMaxData = new System.Windows.Forms.NumericUpDown();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonXacNhanSoDaiLyMax = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.dataGridViewLoaiDaiLy = new System.Windows.Forms.DataGridView();
+            this.buttonXoaLoaiDaiLy = new System.Windows.Forms.Button();
+            this.buttonThemLoaiDaiLy = new System.Windows.Forms.Button();
+            this.LoaiDaiLy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TienNoMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSoDaiLyMaxData)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLoaiDaiLy)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxTitle
@@ -46,41 +65,176 @@ namespace QuanLyCacDaiLi
             this.textBoxTitle.Location = new System.Drawing.Point(0, 0);
             this.textBoxTitle.Name = "textBoxTitle";
             this.textBoxTitle.ReadOnly = true;
-            this.textBoxTitle.Size = new System.Drawing.Size(800, 91);
+            this.textBoxTitle.Size = new System.Drawing.Size(991, 91);
             this.textBoxTitle.TabIndex = 10;
             this.textBoxTitle.Text = "Quy Định";
             this.textBoxTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox1
+            // textBoxSoDaiLyMax
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Nunito SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(13, 98);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(225, 28);
-            this.textBox1.TabIndex = 11;
-            this.textBox1.Text = "Số đại lý tối đa mỗi quận";
+            this.textBoxSoDaiLyMax.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSoDaiLyMax.Font = new System.Drawing.Font("Nunito SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBoxSoDaiLyMax.Location = new System.Drawing.Point(6, 26);
+            this.textBoxSoDaiLyMax.Name = "textBoxSoDaiLyMax";
+            this.textBoxSoDaiLyMax.Size = new System.Drawing.Size(225, 28);
+            this.textBoxSoDaiLyMax.TabIndex = 11;
+            this.textBoxSoDaiLyMax.Text = "Số đại lý tối đa mỗi quận";
             // 
-            // numericUpDown1
+            // numericUpDownSoDaiLyMaxData
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(244, 99);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(58, 27);
-            this.numericUpDown1.TabIndex = 12;
-            this.numericUpDown1.Enter += new System.EventHandler(this.numericUpDown1_Enter);
+            this.numericUpDownSoDaiLyMaxData.Location = new System.Drawing.Point(237, 27);
+            this.numericUpDownSoDaiLyMaxData.Name = "numericUpDownSoDaiLyMaxData";
+            this.numericUpDownSoDaiLyMaxData.Size = new System.Drawing.Size(58, 27);
+            this.numericUpDownSoDaiLyMaxData.TabIndex = 12;
+            this.numericUpDownSoDaiLyMaxData.ValueChanged += new System.EventHandler(this.numericUpDownSoDaiLyMaxData_ValueChanged);
+            this.numericUpDownSoDaiLyMaxData.Enter += new System.EventHandler(this.numericUpDownSoDaiLyMaxData_Enter);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel1.Controls.Add(this.groupBox1);
+            this.flowLayoutPanel1.Controls.Add(this.groupBox2);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 91);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(991, 606);
+            this.flowLayoutPanel1.TabIndex = 13;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.AutoSize = true;
+            this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox1.Controls.Add(this.buttonXacNhanSoDaiLyMax);
+            this.groupBox1.Controls.Add(this.textBoxSoDaiLyMax);
+            this.groupBox1.Controls.Add(this.numericUpDownSoDaiLyMaxData);
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(427, 80);
+            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Số Lượng Đại Lý Tối Đa Mỗi Quận";
+            // 
+            // buttonXacNhanSoDaiLyMax
+            // 
+            this.buttonXacNhanSoDaiLyMax.Font = new System.Drawing.Font("Nunito", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonXacNhanSoDaiLyMax.Location = new System.Drawing.Point(301, 25);
+            this.buttonXacNhanSoDaiLyMax.Name = "buttonXacNhanSoDaiLyMax";
+            this.buttonXacNhanSoDaiLyMax.Size = new System.Drawing.Size(120, 29);
+            this.buttonXacNhanSoDaiLyMax.TabIndex = 13;
+            this.buttonXacNhanSoDaiLyMax.Text = "Xác Nhận";
+            this.buttonXacNhanSoDaiLyMax.UseVisualStyleBackColor = true;
+            this.buttonXacNhanSoDaiLyMax.Click += new System.EventHandler(this.buttonXacNhanSoDaiLyMax_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox2.Controls.Add(this.splitContainer1);
+            this.groupBox2.Location = new System.Drawing.Point(3, 89);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(733, 191);
+            this.groupBox2.TabIndex = 15;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Loại Đại Lý";
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.IsSplitterFixed = true;
+            this.splitContainer1.Location = new System.Drawing.Point(3, 23);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.dataGridViewLoaiDaiLy);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.buttonXoaLoaiDaiLy);
+            this.splitContainer1.Panel2.Controls.Add(this.buttonThemLoaiDaiLy);
+            this.splitContainer1.Size = new System.Drawing.Size(727, 165);
+            this.splitContainer1.SplitterDistance = 500;
+            this.splitContainer1.TabIndex = 2;
+            // 
+            // dataGridViewLoaiDaiLy
+            // 
+            this.dataGridViewLoaiDaiLy.AllowUserToAddRows = false;
+            this.dataGridViewLoaiDaiLy.AllowUserToDeleteRows = false;
+            this.dataGridViewLoaiDaiLy.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewLoaiDaiLy.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewLoaiDaiLy.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewLoaiDaiLy.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.LoaiDaiLy,
+            this.TienNoMax});
+            this.dataGridViewLoaiDaiLy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewLoaiDaiLy.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewLoaiDaiLy.Name = "dataGridViewLoaiDaiLy";
+            this.dataGridViewLoaiDaiLy.RowHeadersWidth = 51;
+            this.dataGridViewLoaiDaiLy.RowTemplate.Height = 29;
+            this.dataGridViewLoaiDaiLy.Size = new System.Drawing.Size(500, 165);
+            this.dataGridViewLoaiDaiLy.TabIndex = 0;
+            this.dataGridViewLoaiDaiLy.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLoaiDaiLy_CellValidated);
+            this.dataGridViewLoaiDaiLy.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dataGridViewLoaiDaiLy_CellValidating);
+            // 
+            // buttonXoaLoaiDaiLy
+            // 
+            this.buttonXoaLoaiDaiLy.Font = new System.Drawing.Font("Nunito", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonXoaLoaiDaiLy.Location = new System.Drawing.Point(2, 38);
+            this.buttonXoaLoaiDaiLy.Name = "buttonXoaLoaiDaiLy";
+            this.buttonXoaLoaiDaiLy.Size = new System.Drawing.Size(164, 29);
+            this.buttonXoaLoaiDaiLy.TabIndex = 1;
+            this.buttonXoaLoaiDaiLy.Text = "Xoá Loại Đại Lý";
+            this.buttonXoaLoaiDaiLy.UseVisualStyleBackColor = true;
+            this.buttonXoaLoaiDaiLy.Click += new System.EventHandler(this.buttonXoaLoaiDaiLy_Click);
+            // 
+            // buttonThemLoaiDaiLy
+            // 
+            this.buttonThemLoaiDaiLy.Font = new System.Drawing.Font("Nunito", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonThemLoaiDaiLy.Location = new System.Drawing.Point(3, 3);
+            this.buttonThemLoaiDaiLy.Name = "buttonThemLoaiDaiLy";
+            this.buttonThemLoaiDaiLy.Size = new System.Drawing.Size(164, 29);
+            this.buttonThemLoaiDaiLy.TabIndex = 1;
+            this.buttonThemLoaiDaiLy.Text = "Thêm Loại Đại Lý";
+            this.buttonThemLoaiDaiLy.UseVisualStyleBackColor = true;
+            this.buttonThemLoaiDaiLy.Click += new System.EventHandler(this.buttonThemLoaiDaiLy_Click);
+            // 
+            // LoaiDaiLy
+            // 
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.LoaiDaiLy.DefaultCellStyle = dataGridViewCellStyle1;
+            this.LoaiDaiLy.HeaderText = "Loại Đại Lý";
+            this.LoaiDaiLy.MinimumWidth = 6;
+            this.LoaiDaiLy.Name = "LoaiDaiLy";
+            this.LoaiDaiLy.ReadOnly = true;
+            // 
+            // TienNoMax
+            // 
+            this.TienNoMax.HeaderText = "Tiền Nợ Cho Phép";
+            this.TienNoMax.MinimumWidth = 6;
+            this.TienNoMax.Name = "TienNoMax";
             // 
             // FormThayDoiQuyDinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(991, 697);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.textBoxTitle);
             this.Name = "FormThayDoiQuyDinh";
             this.Text = "FormThayDoiQuyDinh";
             this.Load += new System.EventHandler(this.FormThayDoiQuyDinh_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSoDaiLyMaxData)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLoaiDaiLy)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -89,7 +243,17 @@ namespace QuanLyCacDaiLi
         #endregion
 
         private System.Windows.Forms.TextBox textBoxTitle;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.TextBox textBoxSoDaiLyMax;
+        private System.Windows.Forms.NumericUpDown numericUpDownSoDaiLyMaxData;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button buttonXacNhanSoDaiLyMax;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.DataGridView dataGridViewLoaiDaiLy;
+        private System.Windows.Forms.Button buttonThemLoaiDaiLy;
+        private System.Windows.Forms.Button buttonXoaLoaiDaiLy;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiDaiLy;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TienNoMax;
     }
 }
