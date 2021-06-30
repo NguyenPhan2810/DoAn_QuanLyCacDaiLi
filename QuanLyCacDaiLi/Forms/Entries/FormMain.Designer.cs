@@ -112,6 +112,7 @@ namespace QuanLyCacDaiLi
             this.buttonThayDoiQuyDinh.TabIndex = 14;
             this.buttonThayDoiQuyDinh.Text = "Thay Đổi Quy Định";
             this.buttonThayDoiQuyDinh.UseVisualStyleBackColor = false;
+            this.buttonThayDoiQuyDinh.Click += new System.EventHandler(this.buttonThayDoiQuyDinh_Click);
             // 
             // buttonLogOut
             // 
