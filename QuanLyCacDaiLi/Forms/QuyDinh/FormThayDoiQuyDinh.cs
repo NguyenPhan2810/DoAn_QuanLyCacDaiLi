@@ -110,7 +110,9 @@ namespace QuanLyCacDaiLi
             {
                 AddRowDataGridViewMatHang(tenMatHang, donGia.ToString(), donViTinh);
                 DatabaseHelper.ExecuteQuery($"INSERT INTO MATHANG VALUES(N'{tenMatHang}', {donGia}, N'{donViTinh}')");
-
+            };
+            newForm.FormClosed += (object sender, FormClosedEventArgs e) =>
+            {
                 FormProvider.GetForm(typeof(FormThayDoiQuyDinh)).Enabled = true;
             };
 
@@ -118,7 +120,7 @@ namespace QuanLyCacDaiLi
 
             FormProvider.GetForm(typeof(FormThayDoiQuyDinh)).Enabled = false;
         }
-        
+
         private void buttonXoaMatHang_Click(object sender, EventArgs e)
         {
             if (dataGridViewMatHang.SelectedRows.Count <= 0)
