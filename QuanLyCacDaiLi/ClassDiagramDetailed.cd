@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Đầu vào của chương trình.">
+    <Position X="0.5" Y="0.578" Height="0.75" Width="1.37" />
+  </Comment>
+  <Comment CommentText="Màn hình chính&#xD;&#xA;LevelOfAcess chính là biến để phân quyền giữa user và admin.">
+    <Position X="2.597" Y="0.5" Height="1.141" Width="1.37" />
+  </Comment>
+  <Comment CommentText="Từ màn hình chính có thể chọn để khởi động một trong những class sau.">
+    <Position X="4.835" Y="0.668" Height="0.843" Width="15.696" />
+  </Comment>
+  <Comment CommentText="Chứa các phương thức cần thiết để giao tiếp với Database.">
+    <Position X="13.387" Y="10.905" Height="0.633" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Chứa biến toàn cục (Số lượng đại lý mỗi quận).">
+    <Position X="15.357" Y="10.959" Height="0.633" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Dựa theo thiết kế singleton mà sẽ cung cấp form cần thiết theo yêu cầu. Tiện cho việc khởi tạo, truy xuất, quản lý các forms.">
+    <Position X="17.46" Y="10.297" Height="1.108" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Hỗ trợ cho class nằm bên trên">
+    <Position X="6.982" Y="16.668" Height="0.75" Width="4.549" />
+  </Comment>
+  <Class Name="QuanLyCacDaiLi.FormBaoCaoCongNoDaiLy">
+    <Position X="18.25" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAGAgAAIAAAjAAAACESAAARAAABAIAAQCIAA=</HashCode>
+      <FileName>Forms\BaoCao\FormBaoCaoCongNoDaiLy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyCacDaiLi.FormBaoCaoDoanhSo">
+    <Position X="16" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAGAAAAIAAAjICAACEQCAARAAERAYAAQAIAA=</HashCode>
+      <FileName>Forms\BaoCao\FormBaoCaoDoanhSo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyCacDaiLi.FormLogIn">
+    <Position X="0.5" Y="1.75" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAQIAAAAACBEAAAAAAiAAAASIAAAAJAAAQAAAAMAAEA=</HashCode>
+      <FileName>Forms\Entries\FormLogIn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyCacDaiLi.FormPhieuThuTien">
+    <Position X="4.75" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>GAAAAAQAACCCAAAQAAjAAEACFBQIAJAQAAAEAAAAAAA=</HashCode>
+      <FileName>Forms\PhieuThuTien\FormPhieuThuTien.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyCacDaiLi.FormPhieuXuatHang">
+    <Position X="13.75" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>OAACAgCEACAIAAAAIQjIgAASAYEICAACAgAAABgUYgA=</HashCode>
+      <FileName>Forms\PhieuXuatHang\FormPhieuXuatHang.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyCacDaiLi.FormXemPhieuXuatHang">
+    <Position X="11.5" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAiAFAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Forms\PhieuXuatHang\FormXemPhieuXuatHang.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyCacDaiLi.FormQuanLyDaiLy">
+    <Position X="9.25" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAIFAAAAAiAAEAIAAAiAAAACkAAIAYAAIGBAgAAAIAA=</HashCode>
+      <FileName>Forms\QuanLyDaiLy\FormQuanLyDaiLy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyCacDaiLi.FormThemDaiLy">
+    <Position X="9.25" Y="7.75" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="QuanLyCacDaiLi.FormThemDaiLy.ThemDaiLyDelegate">
+        <TypeIdentifier>
+          <NewMemberFileName>Forms\QuanLyDaiLy\FormThemDaiLy.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AgAAAA4AADACAAEAQACIAAACBBAEEgkQEAAAgAAAAAI=</HashCode>
+      <FileName>Forms\QuanLyDaiLy\FormThemDaiLy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyCacDaiLi.FormThayDoiQuyDinh">
+    <Position X="7" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QAgAggASACAAAARAABiAAEESSIACCQACEiAECDA0gAg=</HashCode>
+      <FileName>Forms\QuyDinh\FormThayDoiQuyDinh.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyCacDaiLi.FormThemMatHang">
+    <Position X="7" Y="11" Width="2.25" />
+    <NestedTypes>
+      <Delegate Name="QuanLyCacDaiLi.FormThemMatHang.ThemMatHangDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Forms\QuyDinh\FormThemMatHang.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAADIAABAEAACAAAACBAAEAAkBAAAAAAAEgAA=</HashCode>
+      <FileName>Forms\QuyDinh\FormThemMatHang.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyCacDaiLi.FormProvider">
+    <Position X="17.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Forms\FormProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyCacDaiLi.GlobalConstants">
+    <Position X="15.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Forms\GlobalConstants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyCacDaiLi.DatabaseHelper">
+    <Position X="13.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAABAAAAEAAAQAAAAAAAAECAAAAAAA=</HashCode>
+      <FileName>DatabaseHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyCacDaiLi.FormMain">
+    <Position X="2.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAEJAICEAAAAEAUiAggCDAAAGAAgAAABIAAAIAAI=</HashCode>
+      <FileName>Forms\Entries\FormMain.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="levelOfAccess" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="QuanLyCacDaiLi.LevelOfAccess">
+    <Position X="2.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Forms\Entries\FormMain.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
