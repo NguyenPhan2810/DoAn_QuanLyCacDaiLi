@@ -25,7 +25,7 @@ namespace QuanLyCacDaiLi
             string query = @$"select dsq.TENQ
                               from DANHSACHQUAN as dsq left join DAILY as dl on dsq.TENQ = dl.QUAN
                               group by dsq.TENQ
-                              having COUNT(dl.TENDAILY) <= {GlobalConstants.MaxSoLuongDaiLyMoiQuan}";
+                              having COUNT(dl.TENDAILY) < {GlobalConstants.MaxSoLuongDaiLyMoiQuan}";
 
             var dt = DatabaseHelper.GetDataTable(query);
 
