@@ -38,8 +38,7 @@
   <Class Name="QuanLyCacDaiLi.FormLogIn" Collapsed="true">
     <Position X="0.5" Y="1.75" Width="1.25" />
     <TypeIdentifier>
-      <HashCode>AAQIAAAAACBEAAAAAAiAAAASIAAAAJAAAQAAAAMAAEA=</HashCode>
-      <FileName>Forms\Entries\FormLogIn.cs</FileName>
+      <HashCode>AAAAAAAAACAEAAAAAAiAAAASAAAAAIAAAQAAAAMAAEA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="QuanLyCacDaiLi.FormPhieuThuTien" Collapsed="true">
@@ -59,8 +58,7 @@
   <Class Name="QuanLyCacDaiLi.FormXemPhieuXuatHang" Collapsed="true">
     <Position X="4.25" Y="4" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAAAAiAFAACAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Forms\PhieuXuatHang\FormXemPhieuXuatHang.cs</FileName>
+      <HashCode>AAAAAAAAACAAAAAAAAiAEAACAAAAAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="QuanLyCacDaiLi.FormQuanLyDaiLy" Collapsed="true">
@@ -75,13 +73,6 @@
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
-    <NestedTypes>
-      <Delegate Name="QuanLyCacDaiLi.FormThemDaiLy.ThemDaiLyDelegate" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>Forms\QuanLyDaiLy\FormThemDaiLy.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Delegate>
-    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AgAAAA4AADACAAEAQACIAAACBBAEEgkQEAAAgAAAAAI=</HashCode>
       <FileName>Forms\QuanLyDaiLy\FormThemDaiLy.cs</FileName>
@@ -90,19 +81,12 @@
   <Class Name="QuanLyCacDaiLi.FormThayDoiQuyDinh" Collapsed="true">
     <Position X="4.25" Y="2.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>QAgAggASACAAAARAABiAAEESSIACCQACEiAECDA0gAg=</HashCode>
+      <HashCode>AAgAAAAQAAAAAARAABAAAAEQAAACAAAAEgAEABAEgAg=</HashCode>
       <FileName>Forms\QuyDinh\FormThayDoiQuyDinh.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="QuanLyCacDaiLi.FormThemMatHang" Collapsed="true">
     <Position X="6.75" Y="2.5" Width="2" />
-    <NestedTypes>
-      <Delegate Name="QuanLyCacDaiLi.FormThemMatHang.ThemMatHangDelegate" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>Forms\QuyDinh\FormThemMatHang.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Delegate>
-    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAAAAAAADIAABAEAACAAAACBAAEAAkBAAAAAAAEgAA=</HashCode>
       <FileName>Forms\QuyDinh\FormThemMatHang.cs</FileName>
@@ -132,12 +116,8 @@
   <Class Name="QuanLyCacDaiLi.FormMain" Collapsed="true">
     <Position X="2.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAEJAICEAAAAEAUiAggCDAAAGAAgAAABIAAAIAAI=</HashCode>
-      <FileName>Forms\Entries\FormMain.cs</FileName>
+      <HashCode>AgAAAEAAACAAAAAEAAiAAACDAAAAAAAAAAAAAAAIAAI=</HashCode>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="levelOfAccess" />
-    </ShowAsAssociation>
   </Class>
   <Enum Name="QuanLyCacDaiLi.LevelOfAccess" Collapsed="true">
     <Position X="2.25" Y="3" Width="1.5" />
